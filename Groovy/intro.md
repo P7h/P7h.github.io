@@ -16,7 +16,7 @@ public class HelloWorld {
 	}
 }
 ```
-
+<br>
 
 ### Groovy
 ```groovy
@@ -24,9 +24,7 @@ println "Hello World"
 ```
 
 ---V
-
 ## System Properties
-
 ### Java
 ```java
 import java.util.Iterator;
@@ -49,7 +47,7 @@ public class SystemProperties {
     }
 }
 ```
-
+<br>
 
 ### Groovy
 ```groovy
@@ -61,7 +59,6 @@ System.properties.sort().each { k,v ->
 ---V
 
 ## Features
-
 * Automatic Imports
 * Optional semicolons
 * Optional parens
@@ -119,7 +116,8 @@ def s = "A String"
 s.size()
 
 s = null
-s.size() //Caught: java.lang.NullPointerException: Cannot invoke method size() on null object at CommandLine.run(CommandLine.groovy:2)
+s.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
+         // on null object at CommandLine.run(CommandLine.groovy:2)
 s?.size()
 ```
 

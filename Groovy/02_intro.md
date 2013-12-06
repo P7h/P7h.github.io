@@ -69,6 +69,19 @@ System.properties.sort().each { k,v ->
 
 ---V
 
+[![Groovy Books](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GroovyBooks.png)](http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks)
+
+---V
+
+Can you guess what might be the output of this snippet?
+```groovy
+String.methods.each {
+    println it
+}
+```
+
+---V
+
 ## Features
 * Automatic Imports
 * Optional semicolons
@@ -83,5 +96,6 @@ System.properties.sort().each { k,v ->
 * Embedded Quotes
 * Heredocs
 * GStrings
-
----
+* Ranges
+* GDK Helpers
+* Closures

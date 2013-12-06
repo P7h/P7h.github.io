@@ -101,5 +101,3 @@ That, The Other '''
 def name = "John"
 println "Hello ${name}. Today is ${new Date()}"
 ```
-
----

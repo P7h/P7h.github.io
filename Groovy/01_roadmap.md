@@ -10,10 +10,10 @@
 
 ---
 
-## What's on the menu today?
+## What's on Groovy menu?
 
-* Intro to Groovy
-* Install Groovy
+* Groovy introduction
+* Installing Groovy
 * Groovy Commands
 * Ranges
 * Closures
@@ -21,7 +21,6 @@
 * Map Tricks
 * File Tricks
 * Writing / Parsing XML or JSON
-* Boilerplate
 
 ---
 
@@ -60,3 +59,7 @@ Press the ESC key to go overview
 <p>Don't forget you can ESC for overview</p>
 </section>
 
+---V
+
+## Food for thought
+> What is static typing and dynamic typing?

@@ -8,6 +8,7 @@
 
 ## Obligatory "Hello World" program
 
+### Java
 ```java
 public class HelloWorld {
 	public static void main( String[] args ) {
@@ -16,6 +17,8 @@ public class HelloWorld {
 }
 ```
 
+
+### Groovy
 ```groovy
 println "Hello World"
 ```
@@ -24,6 +27,7 @@ println "Hello World"
 
 ## System Properties
 
+### Java
 ```java
 import java.util.Iterator;
 import java.util.Properties;
@@ -46,6 +50,8 @@ public class SystemProperties {
 }
 ```
 
+
+### Groovy
 ```groovy
 System.properties.sort().each { k,v ->
     println "$k = $v"
@@ -75,14 +81,15 @@ System.properties.sort().each { k,v ->
 ### Automatic Imports
 
 ```groovy
-import java.lang. * ;
-import java.util. * ;
-import java.net. * ;
-import java.io. * ;
+import java.lang.* ;
+import java.util.* ;
+import java.net.* ;
+import java.io.* ;
 import java.math.BigInteger;
 import java.math.BigDecimal;
-import groovy.lang. * ;
-import groovy.util. * ;
+
+import groovy.lang.* ;
+import groovy.util.* ;
 ```
 
 ---V
@@ -91,8 +98,8 @@ import groovy.util. * ;
 ### Optional parens
 ### Optional return statements
 ```groovy
-String getFullName(){
-"${firstName} ${lastName}"
+String getFullName() {
+    "${firstName} ${lastName}"
 }
 ```
 ### Optional datatype declaration
@@ -161,12 +168,12 @@ def s3 = "My name is \"Jane\""
 ```
 ### Heredocs
 ```groovy
-String s = "" "This is a
+String s = """This is a
 multi-line String.
 "You don't need to escape internal quotes" , he said.
-"" "
-def ss = '' 'This
-That, The Other '' '
+"""
+def ss = '''This
+That, The Other '''
 ```
 ### GStrings
 ```groovy

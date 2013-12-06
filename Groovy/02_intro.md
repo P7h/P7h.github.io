@@ -3,6 +3,8 @@
 * What is Groovy?
 * Groovy vs. Java
 * How Groovy helps?
+* Few demos
+* Books on Groovy
 
 ---V
 
@@ -69,10 +71,7 @@ System.properties.sort().each { k,v ->
 
 ---V
 
-[![Groovy Books](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GroovyBooks.png)](http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks)
-
----V
-
+## Food for thought
 Can you guess what might be the output of this snippet?
 ```groovy
 String.methods.each {
@@ -82,20 +81,17 @@ String.methods.each {
 
 ---V
 
-## Features
-* Automatic Imports
-* Optional semicolons
-* Optional parens
-* Optional return statements
-* Optional datatype declaration
-* Optional Exception handling
-* Operator Overloading
-* Safe Dereferencing (?)
-* Autoboxing
-* Groovy Truth
-* Embedded Quotes
-* Heredocs
-* GStrings
-* Ranges
-* GDK Helpers
-* Closures
+## Simple Demos
+
+Visualization app
+
+Gradle build script
+
+Displaying Cat pictures from Flickr
+
+Griffon DB Load
+
+---V
+
+## Books on Groovy
+[![Groovy Books](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Groovy_Books.png)](http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks)

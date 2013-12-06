@@ -1,53 +1,178 @@
-# Bootstrapping Groovy
+# Introduction
 
-
-with [Prashanth Babu](http://P7h.org)  ( [@P7h](http://twitter.com/P7h) )
-
-
----
-
-<blockquote class="twitter-tweet" lang="en"><p>Protip: Nobody is really &quot;qualified&quot; to give tech talks. We&#39;re all exploring and figuring it out. Just share what you&#39;ve learned.</p>&mdash; Jeremy Kahn (@jeremyckahn) <a href="https://twitter.com/jeremyckahn/statuses/322390046491688960">April 11, 2013</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
----
-
-## What's on the menu today?
-
-* Groovy vs. Java?
-* Boilerplate
-
----
-
-## Plan
-
-* Introduce concepts
-* Give sample code
-* Explore this presentation yourself
-
----
-
-> Nothing is taught until something is learned.
-
----
-
-You can get to these slides at http://P7h.github.com/Groovy/
-
-You can get the matching source project at https://github.com/P7h
-
----
-
-## How this presentation works
-
-These slides are done in [Reveal.js](http://lab.hakim.se/reveal-js/#/).
-
-Each module is a "top level" slide, down arrow to dive deeper
-
-Press the ESC key to go overview
+* What is Groovy?
+* Groovy vs. Java
+* How Groovy helps?
 
 ---V
 
-<section data-background="#00ff00">
-<h1>You're a sub-slide hero!</h1>
-<p>Don't forget you can ESC for overview</p>
-</section>
+## Obligatory "Hello World" program
+
+```java
+public class HelloWorld {
+	public static void main( String[] args ) {
+		System.out.println( "Hello World" );
+	}
+}
+```
+
+```groovy
+println "Hello World"
+```
+
+---V
+
+## System Properties
+
+```java
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class SystemProperties {
+    public static void main(String[] args) {
+        Properties properties = System.getProperties();
+        SortedMap sortedSystemProperties = new TreeMap(properties);
+        Set keySet = sortedSystemProperties.keySet();
+        Iterator iterator = keySet.iterator();
+        String key = null;
+        while (iterator.hasNext()) {
+            key = (String) iterator.next();
+            System.out.println(key + " = " + properties.getProperty(key));
+        }
+    }
+}
+```
+
+```groovy
+System.properties.sort().each { k,v ->
+    println "$k = $v"
+}
+```
+
+---V
+
+## Features
+
+* Automatic Imports
+* Optional semicolons
+* Optional parens
+* Optional return statements
+* Optional datatype declaration
+* Optional Exception handling
+* Operator Overloading
+* Safe Dereferencing (?)
+* Autoboxing
+* Groovy Truth
+* Embedded Quotes
+* Heredocs
+* GStrings
+
+---V
+
+### Automatic Imports
+
+```groovy
+import java.lang. * ;
+import java.util. * ;
+import java.net. * ;
+import java.io. * ;
+import java.math.BigInteger;
+import java.math.BigDecimal;
+import groovy.lang. * ;
+import groovy.util. * ;
+```
+
+---V
+
+### Optional semicolons
+### Optional parens
+### Optional return statements
+```groovy
+String getFullName(){
+"${firstName} ${lastName}"
+}
+```
+### Optional datatype declaration
+
+---V
+
+### Optional Exception handling
+### Operator Overloading
+```groovy
+def d = new Date()
+d.next()
+(1..3).each{ println d++ }
+```
+### Safe Dereferencing (?)
+```groovy
+def s = "A String"
+s.size()
+
+s = null
+s.size() //Caught: java.lang.NullPointerException: Cannot invoke method size() on null object at CommandLine.run(CommandLine.groovy:2)
+s?.size()
+```
+
+---V
+
+### Autoboxing
+```groovy
+def i = 2
+println i.class
+```
+### Groovy Truth
+
+```groovy
+//true
+if(1) // any non-zero value is true
+if(-1)
+if(!null) // any non-null value is true
+if( "John" ) // any non-empty string is true
+Map family = [dad: "John" , mom: "Jane" ]
+if(family) // true since the map is populated
+String[] sa = new String[1]
+if(sa) // true since the array length is greater than 0
+StringBuffer sb = new StringBuffer()
+sb.append( "Hi" )
+if(sb) // true since the StringBuffer is populated
+
+//false
+if(0) // zero is false
+if(null) // null is false
+if( "" ) // empty strings are false
+Map family = [:]
+if(family) // false since the map is empty
+String[] sa = new String[0]
+if(sa) // false since the array is zero length
+StringBuffer sb = new StringBuffer()
+if(sb) // false since the StringBuffer is empty
+```
+
+---V
+
+### Embedded Quotes
+```groovy
+def s1 = 'My name is "Jane"'
+def s2 = "My name is 'Jane'"
+def s3 = "My name is \"Jane\""
+```
+### Heredocs
+```groovy
+String s = "" "This is a
+multi-line String.
+"You don't need to escape internal quotes" , he said.
+"" "
+def ss = '' 'This
+That, The Other '' '
+```
+### GStrings
+```groovy
+def name = "John"
+println "Hello ${name}. Today is ${new Date()}"
+```
+
+---
 

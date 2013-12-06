@@ -1,18 +1,26 @@
 # Bootstrapping Groovy
 
 
-[Prashanth Babu](http://P7h.org)  ([@P7h](http://twitter.com/P7h) )
+[Prashanth Babu](http://P7h.org)  ([@P7h](http://twitter.com/P7h))
 
 
 ---
 
-![Jeremy Tweet](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Tweet_Jeremy.png)
+[![Jeremy Tweet](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Tweet_Jeremy.png)](https://twitter.com/jeremyckahn/statuses/322390046491688960)
 
 ---
 
 ## What's on the menu today?
 
 * Intro to Groovy
+* Install Groovy
+* Groovy Commands
+* Ranges
+* Closures
+* List Tricks
+* Map Tricks
+* File Tricks
+* Writing / Parsing XML or JSON
 * Boilerplate
 
 ---

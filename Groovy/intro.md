@@ -9,13 +9,13 @@
 ## Groovy
 >  “Groovy is like a super version of Java. It can leverage Java's enterprise capabilities but also has cool productivity features like closures, DSL support, builders and dynamic typing.”
 
-Groovy = Java – boiler plate code
-              + mostly dynamic typing
-              + closures
-              + domain specific languages
-              + builders
-              + metaprogramming
-              + GDK library
+Groovy = Java – boiler plate code<br>
+              + mostly dynamic typing<br>
+              + closures<br>
+              + domain specific languages<br>
+              + builders<br>
+              + metaprogramming<br>
+              + GDK library<br>
 
 ---V
 
@@ -83,8 +83,3 @@ System.properties.sort().each { k,v ->
 * Embedded Quotes
 * Heredocs
 * GStrings
-
----V
-
----
-

@@ -52,7 +52,7 @@ def d = new Date()
 d.next()
 (1..3).each{ println d++ }
 ```
-### Safe Dereferencing (?)
+### Safe Dereferencing
 ```groovy
 def s = "A String"
 s.size()

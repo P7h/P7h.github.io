@@ -38,9 +38,9 @@
 
 ---
 
-You can get to these slides at http://P7h.github.com/Groovy/
+You can get to these slides at http://P7h.github.com/Groovy
 
-You can get the matching source project at https://github.com/P7h
+You can get the matching source code at http://gists.github.com/P7h
 
 ---
 
@@ -55,8 +55,8 @@ Press the ESC key to go overview
 ---V
 
 <section data-background="#00ff00">
-<h1>You're a sub-slide hero!</h1>
-<p>Don't forget you can ESC for overview</p>
+<h1>Yes, these are sub-slides!</h1>
+<p>Don't forget you can ESC for an overview of slides.</p>
 </section>
 
 ---V

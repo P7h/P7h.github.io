@@ -85,9 +85,9 @@ String.methods.each {
 
 Visualization app
 
-Gradle build script
+Build script showdown: Gradle vs. Maven
 
-Displaying Cat pictures from Flickr
+Cat pictures from Flickr
 
 Griffon DB Load
 
@@ -95,3 +95,8 @@ Griffon DB Load
 
 ## Books on Groovy
 [![Groovy Books](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Groovy_Books.png)](http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks)
+
+---V
+
+## Best book on Groovy?
+[![Best book on Groovy](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GinA.png)](http://www.manning.com/koenig)

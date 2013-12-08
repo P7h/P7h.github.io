@@ -42,11 +42,23 @@ String.methods.each {
 
 ### Currying
 
-* Transform function with multiple parameters into a function with fewer parameters by fixing some of the values.
+* Transform function with particular number of parameters and returns a function with some of the parameter values fixed, creating a new function.
 * Curry as many parameters as required.
 * The first curry call fills in the leftmost parameter.
 * Each subsequent call fills in the next parameter to the right.
+* Given:
 
+```groovy
+f: (X x Y) -> Z
+```
+
+* Then:
+
+```groovy
+curry(f): X -> (Y -> Z) 
+```
+
+* Tax calculation:
 ```groovy
 def calculateTax = { taxRate, amount ->
 	amount + (taxRate * amount)

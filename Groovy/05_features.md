@@ -229,6 +229,6 @@ SDF sdf = new SDF("MM/dd/yyyy")
 println sdf.format(new Date())
 ```
 
---V
+---V
 
 [Groovy style and language feature guidelines for Java developers](http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers)

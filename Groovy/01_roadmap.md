@@ -66,4 +66,4 @@ Press the ESC key to go overview of this presentation.
 
 ## Food for thought
 > Groovy is dynamically typed programming language;
-> While Java is statically typed programming language.
+> while Java is statically typed programming language.

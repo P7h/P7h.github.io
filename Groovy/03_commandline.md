@@ -9,16 +9,13 @@
 ---V
 
 ### groovy
-
 ```bash
 groovy HelloWorld.groovy
 groovy HelloWorld
 ```
-
----V
+<br>
 
 ### groovyc
-
 ```bash
 groovyc HelloWorld.groovy
 ```
@@ -26,12 +23,10 @@ groovyc HelloWorld.groovy
 ---V
 
 ### groovydoc
-
 ```bash
 groovydoc HelloWorld.groovy
 ```
-
----V
+<br>
 
 ### groovysh
 
@@ -46,8 +41,7 @@ groovysh
 ```bash
 groovyConsole
 ```
-
----V
+<br>
 
 ### java2groovy
 

@@ -3,10 +3,11 @@
 * It is behavior that doesn’t have a surrounding class.
 
 ```groovy
-def addNumbers = { x, y -> 
-	x + y
+def x = 5, y = 6;
+def printNum = {
+    println x + " " + y
 }
-println addNumbers(4, 3)
+printNum()
 ```
 <br>
 
@@ -40,25 +41,14 @@ String.methods.each {
 
 ---V
 
-### Currying
+### [Currying](http://en.wikipedia.org/wiki/Currying)
 
 * Transform function with particular number of parameters and returns a function with some of the parameter values fixed, creating a new function.
 * Curry as many parameters as required.
 * The first curry call fills in the leftmost parameter.
 * Each subsequent call fills in the next parameter to the right.
-* Given:
-
-```groovy
-f: (X x Y) -> Z
-```
-
-* Then:
-
-```groovy
-curry(f): X -> (Y -> Z) 
-```
-
 * Tax calculation:
+
 ```groovy
 def calculateTax = { taxRate, amount ->
 	amount + (taxRate * amount)

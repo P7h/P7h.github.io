@@ -75,6 +75,7 @@ println order?.customer?.address
 ```
 
 ---V
+
 * Safe Dereferencing
 
 ```groovy
@@ -188,6 +189,7 @@ System.out.println("Name: " + person);
 ```
 
 ---V
+
 * POGO
 
 ```groovy
@@ -215,6 +217,7 @@ println "Name yet again: " + person03
 ```
 
 ---V
+
 * Import aliasing
 
 ```groovy
@@ -222,5 +225,7 @@ import java.text.SimpleDateFormat as SDF
 SDF sdf = new SDF("MM/dd/yyyy")
 println sdf.format(new Date())
 ```
+
 --V
+
 [Groovy style and language feature guidelines for Java developers] (http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers)

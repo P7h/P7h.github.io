@@ -7,13 +7,15 @@
 * Safe Dereferencing
 * Autoboxing
 * Groovy Truth
-* Embedded Quotes
-* Heredocs
+* Embedded Quotes & Heredocs
 * GStrings
+* POJO vs. POGO
+* Import aliasing
 
 ---V
 
 * Automatic imports
+
 ```groovy
 import java.lang.*;
 import java.util.*;
@@ -31,9 +33,13 @@ import groovy.util.*;
 * Optional semicolons and parentheses
 * Optional return statements
 ```groovy
+firstName = "James"
+lastName = "Strachan"
+
 String getFullName() {
-    "${firstName} ${lastName}"
+  "${firstName} ${lastName}"
 }
+println getFullName()
 ```
 
 ---V
@@ -45,24 +51,40 @@ def date = new Date()
 date.next()
 (1..3).each{ println date++ }
 ```
-* Safe Dereferencing
 
+---V
+* Safe Dereferencing
+```java
+if (order != null) {
+    if (order.getCustomer() != null) {
+        if (order.getCustomer().getAddress() != null) {
+            System.out.println(order.getCustomer().getAddress());
+        }
+    }
+}
+```
+<br>
+```groovy
+println order?.customer?.address
+```
+
+---V
 ```groovy
 def str = "A String"
-str.size()
+println str.size()
 
 str = null
 str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
-         // on null object at CommandLine.run(CommandLine.groovy:2)
-str?.size()
+           // on null object at CommandLine.run(CommandLine.groovy:2)
+println str?.size()
 ```
 
 ---V
 
 * Autoboxing
 ```groovy
-def i = 2
-println i.class
+def intNum = 2
+println intNum.class
 ```
 * Groovy Truth
 
@@ -88,7 +110,7 @@ Map family = [:]
 if(family) // false since the map is empty
 String[] sa = new String[0]
 if(sa) // false since the array is zero length
-StringBuffer sb = new StringBuffer()
+StringBuilder sb = new StringBuilder()
 if(sb) // false since the StringBuffer is empty
 ```
 
@@ -96,23 +118,94 @@ if(sb) // false since the StringBuffer is empty
 
 * Embedded Quotes
 ```groovy
-def s1 = 'My name is "Jane"'
-def s2 = "My name is 'Jane'"
-def s3 = "My name is \"Jane\""
+def s1 = 'You either die a "hero" or you live long enough to see yourself become the "villain".'
+def s2 = "You either die a 'hero' or you live long enough to see yourself become the 'villain'."
+def s3 = "You either die a \"hero\" or you live long enough to see yourself become the \"villain\"."
 ```
 * Heredocs
 ```groovy
-String s = """This is a
-multi-line String.
-"You don't need to escape internal quotes".
+String s = """Harvey said "You either die a hero or 
+you live long enough to see yourself become the villain.""
 """
 def ss = '''This
 That and 
-finally The Other '''
+finally The Other'''
 ```
 * GStrings
 ```groovy
 def firstName = "James"
 def lastName = "Strachan"
-println "Hello ${firstName} ${lastName}, today is ${new Date()}"
+println "Ahoy ${firstName} ${lastName}, today is ${new Date()}"
 ```
+
+---V
+
+* POJO
+```java
+public class Person {
+
+	private String firstName;
+	private String lastName;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String toString() {
+		return firstName + " " + lastName;
+	}
+}
+Person person = new Person();
+person.setFirstName("James");
+person.setLastName("Strachan");
+  
+System.out.println("Name: " + person);
+```
+
+---V
+* POGO
+```groovy
+class Person {
+    String firstName
+    String lastName
+    String toString() {
+        return firstName + " " + lastName
+    }
+}
+def person01 = new Person()
+person01.firstName = "James"
+person01.lastName = "Strachan"
+println "Name: " + person01
+
+def person02 = new Person()
+person02.with {
+    firstName = "Guillaume"
+    lastName = "Laforge"
+}
+println "Name again: " + person02
+
+def person03 = new Person(firstName: "Graeme", lastName: "Rocher")
+println "Name yet again: " + person03
+```
+
+---V
+* Import aliasing
+```groovy
+import java.text.SimpleDateFormat as SDF
+SDF sdf = new SDF("MM/dd/yyyy")
+println sdf.format(new Date())
+```
+--V
+[Groovy style and language feature guidelines for Java developers] (http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers)

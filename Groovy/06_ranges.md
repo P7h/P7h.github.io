@@ -10,6 +10,7 @@ println range instanceof Range
 <br>
 
 ### Methods in IntRange
+
 ```groovy
 groovy.lang.IntRange.methods.each { 
 	println it
@@ -19,6 +20,7 @@ groovy.lang.IntRange.methods.each {
 ---V
 
 ### Few other examples
+
 ```groovy
 def i = 1..5
 println i.size()
@@ -29,6 +31,7 @@ println i.contains(9)
 println i.reverse()
 ```
 <br>
+
 ```groovy
 def today = new Date()
 def nextWeek = today + 7

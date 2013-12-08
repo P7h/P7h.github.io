@@ -56,6 +56,7 @@ date.next()
 
 ---V
 * Safe Dereferencing
+
 Java
 
 ```java
@@ -77,6 +78,8 @@ println order?.customer?.address
 ---V
 
 * Safe Dereferencing
+
+Groovy
 
 ```groovy
 def str = "A String"
@@ -228,4 +231,4 @@ println sdf.format(new Date())
 
 --V
 
-[Groovy style and language feature guidelines for Java developers] (http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers)
+[Groovy style and language feature guidelines for Java developers](http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers)

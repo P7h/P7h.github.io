@@ -29,7 +29,7 @@ import groovy.util.*;
 
 ---V
 
-* Optional semicolons and parens
+* Optional semicolons and parentheses
 * Optional return statements
 ```groovy
 String getFullName() {
@@ -47,6 +47,7 @@ date.next()
 (1..3).each{ println date++ }
 ```
 * Safe Dereferencing
+
 ```groovy
 def str = "A String"
 str.size()

@@ -1,7 +1,11 @@
 ## Ranges
+* Groovy offers a native datatype for Ranges.
+* Ranges are specified using the double-dot range operator .. between the left and right bounds.
+
 ```groovy
 def range = 1..3
 println range.class
+println range instanceof Range
 ```
 <br>
 

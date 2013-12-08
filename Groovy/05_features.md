@@ -1,4 +1,4 @@
-## Features
+## Groovy Features
 * Automatic Imports
 * Optional semicolons & parens
 * Optional return statements
@@ -13,7 +13,7 @@
 
 ---V
 
-### Automatic Imports
+* Automatic Imports
 
 ```groovy
 import java.lang.*;
@@ -29,8 +29,8 @@ import groovy.util.*;
 
 ---V
 
-### Optional semicolons and parens
-### Optional return statements
+* Optional semicolons and parens
+* Optional return statements
 ```groovy
 String getFullName() {
     "${firstName} ${lastName}"
@@ -39,14 +39,14 @@ String getFullName() {
 
 ---V
 
-### Optional datatype declaration
-### Operator Overloading
+* Optional datatype declaration
+* Operator Overloading
 ```groovy
 def date = new Date()
 date.next()
 (1..3).each{ println date++ }
 ```
-### Safe Dereferencing
+* Safe Dereferencing
 ```groovy
 def str = "A String"
 str.size()
@@ -59,12 +59,12 @@ str?.size()
 
 ---V
 
-### Autoboxing
+* Autoboxing
 ```groovy
 def i = 2
 println i.class
 ```
-### Groovy Truth
+* Groovy Truth
 
 ```groovy
 //true
@@ -94,13 +94,13 @@ if(sb) // false since the StringBuffer is empty
 
 ---V
 
-### Embedded Quotes
+* Embedded Quotes
 ```groovy
 def s1 = 'My name is "Jane"'
 def s2 = "My name is 'Jane'"
 def s3 = "My name is \"Jane\""
 ```
-### Heredocs
+* Heredocs
 ```groovy
 String s = """This is a
 multi-line String.
@@ -110,7 +110,7 @@ def ss = '''This
 That and 
 finally The Other '''
 ```
-### GStrings
+* GStrings
 ```groovy
 def firstName = "James"
 def lastName = "Strachan"

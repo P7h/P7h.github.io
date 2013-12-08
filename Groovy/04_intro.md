@@ -12,16 +12,16 @@
 >  “Groovy is like a super version of Java. It can leverage Java's enterprise capabilities but also has cool productivity features like closures, DSL support, builders and dynamic typing.”
 
 Groovy = Java – boiler plate code<br>
-              + mostly dynamic typing<br>
-              + closures<br>
-              + domain specific languages<br>
-              + builders<br>
-              + metaprogramming<br>
-              + GDK library<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ mostly dynamic typing<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ closures<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ domain specific languages<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ builders<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ metaprogramming<br>
+              &nbsp;&nbsp;&nbsp;+ GDK library<br>
 
 ---V
 
-## Obligatory "Hello World" program
+## Obligatory "Hello World"
 
 ### Java
 ```java
@@ -89,7 +89,7 @@ Visualization app
 
 Build script showdown: Gradle vs. Maven
 
-Griffon DB Load
+Griffon sample app for loading Database
 
 ---V
 

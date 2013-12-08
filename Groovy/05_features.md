@@ -1,5 +1,5 @@
 ## Groovy Features
-* Automatic Imports
+* Automatic imports
 * Optional semicolons & parens
 * Optional return statements
 * Optional datatype declaration
@@ -13,8 +13,7 @@
 
 ---V
 
-* Automatic Imports
-
+* Automatic imports
 ```groovy
 import java.lang.*;
 import java.util.*;

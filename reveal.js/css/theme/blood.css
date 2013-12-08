@@ -49,7 +49,7 @@ body {
   font-family: Ubuntu, "sans-serif";
   line-height: 0.9em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   text-shadow: 2px 2px 2px #222222; }
 
 .reveal h1 {

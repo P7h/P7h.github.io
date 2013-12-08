@@ -100,7 +100,8 @@ String.methods.each {
 
 ---V
 
-## Best book on Groovy?
+## A thorough introduction to Groovy
 
 [![Best book on Groovy](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GinA.png)](http://www.manning.com/koenig)
+
 [Groovy in Action aka GinA](http://www.manning.com/koenig)

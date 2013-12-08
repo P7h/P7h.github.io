@@ -3,7 +3,6 @@
 * Optional semicolons & parens
 * Optional return statements
 * Optional datatype declaration
-* Optional Exception handling
 * Operator Overloading
 * Safe Dereferencing
 * Autoboxing
@@ -11,56 +10,51 @@
 * Embedded Quotes
 * Heredocs
 * GStrings
-* Ranges
-* GDK Helpers
-* Closures
 
 ---V
 
 ### Automatic Imports
 
 ```groovy
-import java.lang.* ;
-import java.util.* ;
-import java.net.* ;
-import java.io.* ;
+import java.lang.*;
+import java.util.*;
+import java.net.*;
+import java.io.*;
 import java.math.BigInteger;
 import java.math.BigDecimal;
 
-import groovy.lang.* ;
-import groovy.util.* ;
+import groovy.lang.*;
+import groovy.util.*;
 ```
 
 ---V
 
-### Optional semicolons
-### Optional parens
+### Optional semicolons and parens
 ### Optional return statements
 ```groovy
 String getFullName() {
     "${firstName} ${lastName}"
 }
 ```
-### Optional datatype declaration
 
 ---V
 
-### Optional Exception handling
+### Optional datatype declaration
 ### Operator Overloading
 ```groovy
-def d = new Date()
-d.next()
-(1..3).each{ println d++ }
+def date = new Date()
+date.next()
+(1..3).each{ println date++ }
 ```
 ### Safe Dereferencing
 ```groovy
-def s = "A String"
-s.size()
+def str = "A String"
+str.size()
 
-s = null
-s.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
+str = null
+str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
          // on null object at CommandLine.run(CommandLine.groovy:2)
-s?.size()
+str?.size()
 ```
 
 ---V
@@ -110,13 +104,15 @@ def s3 = "My name is \"Jane\""
 ```groovy
 String s = """This is a
 multi-line String.
-"You don't need to escape internal quotes" , he said.
+"You don't need to escape internal quotes".
 """
 def ss = '''This
-That, The Other '''
+That and 
+finally The Other '''
 ```
 ### GStrings
 ```groovy
-def name = "John"
-println "Hello ${name}. Today is ${new Date()}"
+def firstName = "James"
+def lastName = "Strachan"
+println "Hello ${firstName} ${lastName}, today is ${new Date()}"
 ```

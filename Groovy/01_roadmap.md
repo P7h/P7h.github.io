@@ -10,17 +10,18 @@
 
 ---
 
-## What's on Groovy menu?
+## What's on the menu?
 
-* Groovy introduction
 * Installing Groovy
-* Groovy Commands
+* Groovy command line
+* Groovy introduction
+* Groovy Features
 * Ranges
 * Closures
 * List Tricks
 * Map Tricks
 * File Tricks
-* Writing / Parsing XML or JSON
+* Writing and parsing XML or JSON
 
 ---
 
@@ -38,6 +39,7 @@
 
 ---
 
+## About these slides
 You can get to these slides at http://P7h.github.com/Groovy
 
 You can get the matching source code at http://gists.github.com/P7h
@@ -46,20 +48,22 @@ You can get the matching source code at http://gists.github.com/P7h
 
 ## How this presentation works
 
-These slides are done in [Reveal.js](http://lab.hakim.se/reveal-js/#/).
+These slides are done in [Reveal.js](http://lab.hakim.se/reveal-js).
 
-Each module is a "top level" slide, down arrow to dive deeper
+Each module is a "top level" slide, down arrow to dive deeper.
 
-Press the ESC key to go overview
+Press the ESC key to go overview of this presentation.
 
 ---V
 
 <section data-background="#00ff00">
-<h1>Yes, these are sub-slides!</h1>
+<h4>Yes, these are sub-slides!</h4>
+<p>Lookout for the down arrow for the nested slides.</p>
 <p>Don't forget you can ESC for an overview of slides.</p>
 </section>
 
 ---V
 
 ## Food for thought
-> What is static typing and dynamic typing?
+> Groovy is dynamically typed programming language;
+> While Java is statically typed programming language.

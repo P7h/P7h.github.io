@@ -83,11 +83,11 @@ String.methods.each {
 
 ## Simple Demos
 
+Cat pictures from Flickr
+
 Visualization app
 
 Build script showdown: Gradle vs. Maven
-
-Cat pictures from Flickr
 
 Griffon DB Load
 

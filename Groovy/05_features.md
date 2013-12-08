@@ -32,6 +32,7 @@ import groovy.util.*;
 
 * Optional semicolons and parentheses
 * Optional return statements
+
 ```groovy
 firstName = "James"
 lastName = "Strachan"
@@ -46,6 +47,7 @@ println getFullName()
 
 * Optional datatype declaration
 * Operator Overloading
+
 ```groovy
 def date = new Date()
 date.next()
@@ -54,6 +56,8 @@ date.next()
 
 ---V
 * Safe Dereferencing
+Java
+
 ```java
 if (order != null) {
     if (order.getCustomer() != null) {
@@ -64,11 +68,15 @@ if (order != null) {
 }
 ```
 <br>
+Groovy
+
 ```groovy
 println order?.customer?.address
 ```
 
 ---V
+* Safe Dereferencing
+
 ```groovy
 def str = "A String"
 println str.size()
@@ -82,6 +90,7 @@ println str?.size()
 ---V
 
 * Autoboxing
+
 ```groovy
 def intNum = 2
 println intNum.class
@@ -117,12 +126,14 @@ if(sb) // false since the StringBuffer is empty
 ---V
 
 * Embedded Quotes
+
 ```groovy
 def s1 = 'You either die a "hero" or you live long enough to see yourself become the "villain".'
 def s2 = "You either die a 'hero' or you live long enough to see yourself become the 'villain'."
 def s3 = "You either die a \"hero\" or you live long enough to see yourself become the \"villain\"."
 ```
 * Heredocs
+
 ```groovy
 String s = """Harvey said "You either die a hero or 
 you live long enough to see yourself become the villain.""
@@ -132,6 +143,7 @@ That and
 finally The Other'''
 ```
 * GStrings
+
 ```groovy
 def firstName = "James"
 def lastName = "Strachan"
@@ -141,6 +153,7 @@ println "Ahoy ${firstName} ${lastName}, today is ${new Date()}"
 ---V
 
 * POJO
+
 ```java
 public class Person {
 
@@ -176,6 +189,7 @@ System.out.println("Name: " + person);
 
 ---V
 * POGO
+
 ```groovy
 class Person {
     String firstName
@@ -202,6 +216,7 @@ println "Name yet again: " + person03
 
 ---V
 * Import aliasing
+
 ```groovy
 import java.text.SimpleDateFormat as SDF
 SDF sdf = new SDF("MM/dd/yyyy")

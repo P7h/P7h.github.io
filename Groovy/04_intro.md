@@ -96,11 +96,11 @@ String.methods.each {
 
 ## Books on Groovy
 [![Groovy Books](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Groovy_Books.png)](http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks)
-http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks
+[Various Groovy Books on Amazon](http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&lo=stripbooks)
 
 ---V
 
 ## Best book on Groovy?
-Groovy in Action [GinA]
+
 [![Best book on Groovy](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GinA.png)](http://www.manning.com/koenig)
-http://www.manning.com/koenig
+[Groovy in Action aka GinA](http://www.manning.com/koenig)

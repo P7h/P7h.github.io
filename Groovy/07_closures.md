@@ -54,7 +54,7 @@ def calculateTax = { taxRate, amount ->
 
 def tax = calculateTax.curry(0.1)
 
-[10,20,30].each {
+(10..15).each {
 	println "Total cost: ${tax(it)}"
 }
 ```
@@ -72,10 +72,10 @@ def compute = {
         result += it
     }
 }
-5.times(compute)
+5.times compute
 assert '01234' == result
 
-0.upto(7, compute)
+0.upto 7, compute
 assert '01234567' == result
 
 0.step 10, 2, compute

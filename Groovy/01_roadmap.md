@@ -57,7 +57,7 @@ Press the ESC key to go overview of this presentation.
 ---V
 
 <section data-background="#000000">
-<h3>Yes, these are sub-slides!</h3>
+<h2>Yes, these are sub-slides!</h2>
 <p>Lookout for the down arrow for the nested slides.</p>
 <p>Don't forget you can ESC for an overview of slides.</p>
 </section>

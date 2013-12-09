@@ -1,5 +1,6 @@
 ## Groovy Features
 * Automatic imports
+* Import aliasing
 * Optional semicolons & parens
 * Optional return statements
 * Optional datatype declaration
@@ -10,7 +11,6 @@
 * Embedded Quotes & Heredocs
 * GStrings
 * POJO vs. POGO
-* Import aliasing
 
 ---V
 
@@ -26,6 +26,14 @@ import java.math.BigDecimal;
 
 import groovy.lang.*;
 import groovy.util.*;
+```
+
+* Import aliasing
+
+```groovy
+import java.text.SimpleDateFormat as SDF
+SDF sdf = new SDF("MM/dd/yyyy")
+println sdf.format(new Date())
 ```
 
 ---V
@@ -217,16 +225,6 @@ println "Name again: " + person02
 
 def person03 = new Person(firstName: "Graeme", lastName: "Rocher")
 println "Name yet again: " + person03
-```
-
----V
-
-* Import aliasing
-
-```groovy
-import java.text.SimpleDateFormat as SDF
-SDF sdf = new SDF("MM/dd/yyyy")
-println sdf.format(new Date())
 ```
 
 ---V

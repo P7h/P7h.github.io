@@ -42,7 +42,7 @@
 ## About these slides
 You can get to these slides at http://P7h.github.io/Groovy
 
-You can get the matching source code at http://gists.github.com/P7h
+You can get the matching source code at http://gist.github.com/P7h
 
 ---
 

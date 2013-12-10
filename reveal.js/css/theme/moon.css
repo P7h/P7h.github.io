@@ -74,7 +74,7 @@ body {
  *********************************************/
 .reveal a:not(.image) {
   color: #46d54b;
-  text-decoration: none;
+  text-decoration: underline;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   -ms-transition: color .15s ease;
@@ -82,7 +82,7 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #78b9e6;
+  color: #7f8120;
   text-shadow: none;
   border: none; }
 

@@ -32,6 +32,8 @@ Groovy = Java – boiler plate code<br>
 ---V
 
 ## Type Systems
+* In programming languages, a **type system** is a collection of rules that assign a property called a type to the various constructs — such as variables, expressions, functions or modules, etc — a computer program is composed of.
+
 > Groovy is [Dynamically typed programming language](http://en.wikipedia.org/wiki/Dynamic_programming_language); while Java is [Statically typed programming language](http://en.wikipedia.org/wiki/Type_system#Static_type-checking).
 
 * Groovy

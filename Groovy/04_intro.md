@@ -1,10 +1,11 @@
 # Introduction
 
 * What is Groovy?
-* Groovy vs. Java
+* Code snippet showdown: Groovy vs. Java
 * How Groovy helps?
 * Few demos
 * Books on Groovy
+* Recommended Book
 
 ---V
 

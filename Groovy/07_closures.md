@@ -1,10 +1,10 @@
 ## Closures
 * Closure is a free-standing, named block of code. 
-* It is behavior that doesn’t have a surrounding class.
+* It is a behavior that doesn’t have a surrounding class.
 
 ```groovy
 def x = 5, y = 6;
-def printNum = {
+def printNum {
     println x + " " + y
 }
 printNum()
@@ -30,7 +30,7 @@ printSum 5, 7
 def printStr = { 
 	print it
 }
-printStr "Printing with custom method"
+printStr "Print but with a custom method"
 ```
 
 ```groovy
@@ -74,6 +74,7 @@ def compute = {
         result += it
     }
 }
+
 5.times compute
 assert '01234' == result
 

@@ -59,7 +59,9 @@ println getFullName()
 ```groovy
 def date = new Date()
 date.next()
-(1..3).each{ println date++ }
+(1..3).each { 
+	println date++
+}
 ```
 
 ---V
@@ -95,7 +97,7 @@ println str.size()
 
 str = null
 str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
-           // on null object at CommandLine.run(CommandLine.groovy:2)
+           // on null object at ConsoleScript3.run(ConsoleScript3:5)
 println str?.size()
 ```
 
@@ -148,11 +150,11 @@ def s3 = "You either die a \"hero\" or you live long enough to see yourself beco
 
 ```groovy
 String s = """Harvey said "You either die a hero or 
-you live long enough to see yourself become the villain.""
+you live long enough to see yourself become the villain."
 """
-def ss = '''This
-That and 
-finally The Other'''
+def ss = '''You either die a hero or 
+you live long enough to see 
+yourself become the villain.'''
 ```
 * GStrings
 
@@ -208,7 +210,7 @@ class Person {
     String firstName
     String lastName
     String toString() {
-        return firstName + " " + lastName
+        firstName + " " + lastName
     }
 }
 def person01 = new Person()
@@ -223,10 +225,12 @@ person02.with {
 }
 println "Name again: " + person02
 
-def person03 = new Person(firstName: "Graeme", lastName: "Rocher")
+def person03 = new Person(lastName: "Rocher", firstName: "Graeme")
 println "Name yet again: " + person03
 ```
 
 ---V
+
+* Groovy coding guidelines
 
 [Groovy style and language feature guidelines for Java developers](http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers)

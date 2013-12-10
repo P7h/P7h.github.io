@@ -12,7 +12,7 @@ println range instanceof Range
 ### Methods in IntRange
 
 ```groovy
-groovy.lang.IntRange.methods.each { 
+IntRange.methods.each { 
 	println it
 }
 ```

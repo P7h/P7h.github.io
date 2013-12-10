@@ -12,10 +12,10 @@
 
 ## What's on the menu?
 
-* Installing Groovy
-* Groovy command line
-* Groovy introduction
-* Groovy Features
+* Groovy installation and env setup
+* Groovy command line binaries
+* Introduction to Groovy
+* Features unique to Groovy [in comparison with Java]
 * Ranges
 * Closures
 * List Tricks
@@ -40,7 +40,7 @@
 ---
 
 ## About these slides
-You can get to these slides at http://P7h.github.com/Groovy
+You can get to these slides at http://P7h.github.io/Groovy
 
 You can get the matching source code at http://gists.github.com/P7h
 
@@ -50,7 +50,7 @@ You can get the matching source code at http://gists.github.com/P7h
 
 These slides are done in [Reveal.js](http://lab.hakim.se/reveal-js).
 
-Each module is a "top level" slide, down arrow to dive deeper.
+Each module is a "top-level" slide, down arrow to dive deeper.
 
 Press the ESC key to go overview of this presentation.
 
@@ -58,7 +58,7 @@ Press the ESC key to go overview of this presentation.
 
 <section data-background="#000000">
 <h2>Yes, these are sub-slides!</h2>
-<p>Lookout for the down arrow for the nested slides.</p>
+<p>Look for the down arrow for the nested slides.</p>
 <p>Don't forget you can ESC for an overview of slides.</p>
 </section>
 

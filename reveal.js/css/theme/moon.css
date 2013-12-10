@@ -43,7 +43,7 @@ body {
   font-size: 36px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #b59b49; }
+  color: #eee8d5; }
 
 ::selection {
   color: black;
@@ -96,7 +96,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #b59b49;
+  border: 4px solid #eee8d5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -129,16 +129,16 @@ body {
   border-top-color: #46d54b; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #bbbe2f; }
+  border-right-color: #7f8120; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #bbbe2f; }
+  border-left-color: #7f8120; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #bbbe2f; }
+  border-bottom-color: #7f8120; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #bbbe2f; }
+  border-top-color: #7f8120; }
 
 /*********************************************
  * PROGRESS BAR

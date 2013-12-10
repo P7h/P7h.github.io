@@ -4,8 +4,8 @@
 * Optional semicolons & parens
 * Optional return statements
 * Optional datatype declaration
-* Operator Overloading
-* Safe Dereferencing
+* Operator overloading
+* Safe dereferencing
 * Autoboxing
 * Groovy Truth
 * Embedded Quotes & Heredocs
@@ -17,15 +17,15 @@
 * Automatic imports
 
 ```groovy
-import java.lang.*;
-import java.util.*;
-import java.net.*;
-import java.io.*;
-import java.math.BigInteger;
-import java.math.BigDecimal;
+import java.lang.*
+import java.util.*
+import java.net.*
+import java.io.*
+import java.math.BigInteger
+import java.math.BigDecimal
 
-import groovy.lang.*;
-import groovy.util.*;
+import groovy.lang.*
+import groovy.util.*
 ```
 
 * Import aliasing
@@ -54,7 +54,7 @@ println getFullName()
 ---V
 
 * Optional datatype declaration
-* Operator Overloading
+* Operator overloading
 
 ```groovy
 def date = new Date()
@@ -65,7 +65,7 @@ date.next()
 ```
 
 ---V
-* Safe Dereferencing
+* Safe dereferencing
 
 Java
 
@@ -87,7 +87,7 @@ println order?.customer?.address
 
 ---V
 
-* Safe Dereferencing
+* Safe dereferencing
 
 Groovy
 
@@ -146,6 +146,7 @@ def s1 = 'You either die a "hero" or you live long enough to see yourself become
 def s2 = "You either die a 'hero' or you live long enough to see yourself become the 'villain'."
 def s3 = "You either die a \"hero\" or you live long enough to see yourself become the \"villain\"."
 ```
+
 * Heredocs
 
 ```groovy
@@ -217,14 +218,18 @@ def person01 = new Person()
 person01.firstName = "James"
 person01.lastName = "Strachan"
 println "Name: " + person01
+```
 
+```groovy
 def person02 = new Person()
 person02.with {
     firstName = "Guillaume"
     lastName = "Laforge"
 }
 println "Name again: " + person02
+```
 
+```groovy
 def person03 = new Person(lastName: "Rocher", firstName: "Graeme")
 println "Name yet again: " + person03
 ```

@@ -19,7 +19,7 @@ IntRange.methods.each {
 
 ---V
 
-### Few other examples
+### Few other methods of Range
 
 ```groovy
 def i = 1..5

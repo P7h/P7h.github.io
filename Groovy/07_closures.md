@@ -32,6 +32,7 @@ def printStr = {
 }
 printStr "Print but with a custom method"
 ```
+<br>
 
 ```groovy
 String.methods.each {
@@ -47,9 +48,9 @@ String.methods.each {
 * Curry as many parameters as required.
 * The first curry call fills in the leftmost parameter.
 * Each subsequent call fills in the next parameter to the right.
-* Tax calculation:
 
 ```groovy
+//Tax calculation example
 def calculateTax = { taxRate, amount ->
 	amount + (taxRate * amount)
 }

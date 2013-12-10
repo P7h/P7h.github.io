@@ -1,4 +1,5 @@
 ## Groovy Features
+
 * Automatic imports
 * Import aliasing
 * Optional semicolons & parens
@@ -65,6 +66,22 @@ date.next()
 ```
 
 ---V
+
+* Safe dereferencing
+
+Groovy
+
+```groovy
+def str = "A String"
+println str.size()
+
+str = null
+str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
+           // on null object at ConsoleScript3.run(ConsoleScript3:5)
+println str?.size()
+```
+
+---V
 * Safe dereferencing
 
 Java
@@ -87,28 +104,20 @@ println order?.customer?.address
 
 ---V
 
-* Safe dereferencing
-
-Groovy
+* Autoboxing
 
 ```groovy
-def str = "A String"
-println str.size()
+def someNumber = 2
+println someNumber.class
 
-str = null
-str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
-           // on null object at ConsoleScript3.run(ConsoleScript3:5)
-println str?.size()
+//Assign the same variable a different value / datatype.
+//Yes, dynamic!!
+someNumber = 2.0d
+println someNumber.class
 ```
 
 ---V
 
-* Autoboxing
-
-```groovy
-def intNum = 2
-println intNum.class
-```
 * Groovy Truth
 
 ```groovy
@@ -121,9 +130,9 @@ Map family = [dad: "John" , mom: "Jane" ]
 if(family) // true since the map is populated
 String[] sa = new String[1]
 if(sa) // true since the array length is greater than 0
-StringBuffer sb = new StringBuffer()
+StringBuilder sb = new StringBuilder()
 sb.append( "Hi" )
-if(sb) // true since the StringBuffer is populated
+if(sb) // true since the StringBuilder is populated
 
 //false
 if(0) // zero is false
@@ -134,7 +143,7 @@ if(family) // false since the map is empty
 String[] sa = new String[0]
 if(sa) // false since the array is zero length
 StringBuilder sb = new StringBuilder()
-if(sb) // false since the StringBuffer is empty
+if(sb) // false since the StringBuilder is empty
 ```
 
 ---V
@@ -150,12 +159,11 @@ def s3 = "You either die a \"hero\" or you live long enough to see yourself beco
 * Heredocs
 
 ```groovy
-String s = """Harvey said "You either die a hero or 
-you live long enough to see yourself become the villain."
-"""
-def ss = '''You either die a hero or 
-you live long enough to see 
-yourself become the villain.'''
+String groovyHereDocs1 = """Harvey said "You either die a hero or 
+you live long enough to see yourself become the villain.""""
+def groovyHereDocs2 = '''You either die a hero or 
+you live long enough to see yourself become the villain.'''
+println groovyHereDocs2.class
 ```
 * GStrings
 
@@ -214,6 +222,7 @@ class Person {
         firstName + " " + lastName
     }
 }
+//One way of instantiating an object in Groovy.
 def person01 = new Person()
 person01.firstName = "James"
 person01.lastName = "Strachan"
@@ -221,17 +230,18 @@ println "Name: " + person01
 ```
 
 ```groovy
-def person02 = new Person()
-person02.with {
+//Another way of instantiating an object in Groovy.
+person01.with {
     firstName = "Guillaume"
     lastName = "Laforge"
 }
-println "Name again: " + person02
+println "Name again: " + person01
 ```
 
 ```groovy
-def person03 = new Person(lastName: "Rocher", firstName: "Graeme")
-println "Name yet again: " + person03
+//Yet another way of instantiating an object in Groovy.
+def person02 = new Person(lastName: "Rocher", firstName: "Graeme")
+println "Name yet again: " + person02
 ```
 
 ---V

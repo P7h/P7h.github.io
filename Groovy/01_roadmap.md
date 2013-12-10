@@ -61,9 +61,3 @@ Press the ESC key to go overview of this presentation.
 <p>Look for the down arrow for the nested slides.</p>
 <p>Don't forget you can ESC for an overview of slides.</p>
 </section>
-
----V
-
-## Food for thought
-> Groovy is dynamically typed programming language;
-> while Java is statically typed programming language.

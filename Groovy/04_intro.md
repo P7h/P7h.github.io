@@ -1,16 +1,24 @@
 # Introduction
 
 * What is Groovy?
+* Type Systems
 * Code snippet showdown: Groovy vs. Java
 * How Groovy helps?
 * Few demos
 * Books on Groovy
 * Recommended Book
+* Groovy guys on Twitter
+
+---V
+
+## Food for thought
+> Any Java file can be renamed as a Groovy file. And it will compile as fine.
+> Groovy runs on the JVM.
 
 ---V
 
 ## Groovy
->  “Groovy is like a super version of Java. It can leverage Java's enterprise capabilities but also has cool productivity features like closures, DSL support, builders and dynamic typing.”
+> Groovy is like a super version of Java. It can leverage Java's enterprise capabilities but also has cool productivity features like closures, DSL support, builders and dynamic typing.
 
 <br>
 Groovy = Java – boiler plate code<br>
@@ -20,6 +28,27 @@ Groovy = Java – boiler plate code<br>
               + builders<br>
               + metaprogramming<br>
               + GDK library<br>
+
+---V
+
+## Type Systems
+> Groovy is [Dynamically typed programming language](http://en.wikipedia.org/wiki/Dynamic_programming_language); while Java is [Statically typed programming language](http://en.wikipedia.org/wiki/Type_system#Static_type-checking).
+
+* Groovy
+
+```groovy
+def str = "Peter Higgs"
+println str.class
+```
+
+<br>
+
+* Java
+
+```java
+String str = "Satyendra Nath Bose";
+System.out.println(str.class);
+```
 
 ---V
 
@@ -66,8 +95,8 @@ public class SystemProperties {
 
 ### Groovy
 ```groovy
-System.properties.sort().each { k,v ->
-    println "$k = $v"
+System.properties.sort().each { key, value ->
+    println "$key = $value"
 }
 ```
 
@@ -106,3 +135,9 @@ String.methods.each {
 [![Best book on Groovy](https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GinA.png)](http://www.manning.com/koenig)
 
 [Groovy in Action aka GinA](http://www.manning.com/koenig)
+
+---V
+
+## Groovy guys on Twitter
+
+* [Guillaume Laforge's public Groovy Ecosystem List](https://twitter.com/glaforge/groovy-ecosystem/members)

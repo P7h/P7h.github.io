@@ -1,6 +1,8 @@
 ## Closures
 * Closure is a free-standing, named block of code. 
 * It is a behavior that doesn’t have a surrounding class.
+* As of today, Java does not have this feature.
+* Java 8 is scheduled to come with this most wanted feature coined as [Lambdas](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
 
 ```groovy
 def x = 5, y = 6;
@@ -39,6 +41,8 @@ String.methods.each {
     println it
 }
 ```
+
+* _More about this in List Compressions._
 
 ---V
 

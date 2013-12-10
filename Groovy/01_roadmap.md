@@ -12,16 +12,17 @@
 
 ## What's on the menu?
 
-* Groovy installation and env setup
-* Groovy command line binaries
-* Introduction to Groovy
-* Features unique to Groovy [in comparison with Java]
-* Ranges
-* Closures
-* List Tricks
-* Map Tricks
-* File Tricks
-* Writing and parsing XML or JSON
+* <a href="#/3">Agenda</a>
+* <a href="#/7">Groovy installation and env setup</a>
+* <a href="#/8">Groovy command line binaries</a>
+* <a href="#/9">Introduction to Groovy
+* <a href="#/10">Features unique to Groovy [in comparison with Java]</a>
+* <a href="#/11">Ranges</a>
+* <a href="#/12">Closures</a>
+* <a href="#/13">List Tricks</a>
+* <a href="#/14">Map Tricks</a>
+* <a href="#/15">File Tricks</a>
+* <a href="#/16">Writing and parsing XML or JSON</a>
 
 ---
 

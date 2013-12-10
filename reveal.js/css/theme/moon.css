@@ -73,7 +73,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #2643d2;
+  color: #46d54b;
   text-decoration: underline;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -106,7 +106,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #2643d2;
+  border-color: #46d54b;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************

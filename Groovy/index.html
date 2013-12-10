@@ -52,8 +52,8 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: 'page', // default/cube/page/concave/zoom/linear/fade/none
-				backgroundTransition: 'zoom',
+				transition: Reveal.getQueryHash().transition, // default/cube/page/concave/zoom/linear/fade/none
+				backgroundTransition: Reveal.getQueryHash().transition || 'default',
 
 				// Parallax scrolling
 				//parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',

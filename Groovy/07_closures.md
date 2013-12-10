@@ -1,8 +1,9 @@
 ## Closures
-* Closure is a free-standing, named block of code. 
+* Not to be confused with [Clojure](http://clojure.org), another JVM based Dynamic programming language. 
+* Closure is a free-standing, named block of code.
 * It is a behavior that doesn’t have a surrounding class.
-* As of today, Java does not have this feature.
-* Java 8 is scheduled to come with this most wanted feature coined as [Lambdas](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
+* As of this writing, Java does not have this feature.
+* Java 8 is scheduled to come with this most wanted feature coined as [Lambdas](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) in March, 2014.
 
 ```groovy
 def x = 5, y = 6;
@@ -42,7 +43,7 @@ String.methods.each {
 }
 ```
 
-* _More about this in List Compressions._
+* _More about Closures in List and Map Comprehensions later._
 
 ---V
 

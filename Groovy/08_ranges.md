@@ -46,6 +46,8 @@ def nextWeek = today + 7
 
 ---V
 
+### Ranges in switch cases
+
 ```groovy
 def stage = ""
 def years = 58

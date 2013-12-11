@@ -1,4 +1,4 @@
-# Maps
+### Maps
 
 ```groovy
 def map = [name:"Sachin Tendulkar", likes:"Cricket", id:10]
@@ -59,6 +59,7 @@ println map02
 ### Maps
 
 * Variants of iterating a Map. 
+
 ```groovy
 def p = new StringBuilder()
 [1:'a', 2:'b', 3:'c'].each {

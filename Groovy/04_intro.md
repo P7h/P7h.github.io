@@ -11,8 +11,8 @@
 
 ---V
 
-## Food for thought
-> Any Java file can be renamed as a Groovy file. And it will compile as fine.
+## Tip
+> Any Java file can be renamed as a Groovy file. And it will compile and execute just as fine.
 > Groovy runs on the JVM.
 
 ---V
@@ -21,26 +21,29 @@
 > Groovy is like a super version of Java. It can leverage Java's enterprise capabilities but also has cool productivity features like closures, DSL support, builders and dynamic typing.
 
 <br>
-Groovy = Java – boiler plate code<br>
-              + mostly dynamic typing<br>
-              + closures<br>
-              + domain specific languages<br>
-              + builders<br>
-              + metaprogramming<br>
-              + GDK library<br>
+
+```groovy
+Groovy = Java – boiler plate code
+              + mostly dynamic typing
+              + closures
+              + domain specific languages
+              + builders
+              + metaprogramming
+              + GDK library
+```
 
 ---V
 
 ## Type Systems
-* In programming languages, a **type system** is a collection of rules that assign a property called a type to the various constructs — such as variables, expressions, functions or modules, etc — a computer program is composed of.
+* In programming languages, a **type system** is a collection of rules that assign a property called a _type_ to the various constructs — such as variables, expressions, functions or modules, etc — a computer program is composed of.
 
-> Groovy is [Dynamically typed programming language](http://en.wikipedia.org/wiki/Dynamic_programming_language); while Java is [Statically typed programming language](http://en.wikipedia.org/wiki/Type_system#Static_type-checking).
+> Groovy is [dynamically typed programming language](http://en.wikipedia.org/wiki/Dynamic_programming_language); while Java is [statically typed programming language](http://en.wikipedia.org/wiki/Type_system#Static_type-checking).
 
 * Groovy
 
 ```groovy
-def str = "Peter Higgs"
-println str.class
+def groovyString = "Peter Higgs"
+println groovyString.class
 ```
 
 <br>
@@ -48,8 +51,7 @@ println str.class
 * Java
 
 ```java
-String str = "Satyendra Nath Bose";
-System.out.println(str.class);
+String javaString = "Satyendra Nath Bose";
 ```
 
 ---V
@@ -59,8 +61,8 @@ System.out.println(str.class);
 ### Java
 ```java
 public class HelloWorld {
-	public static void main( String[] args ) {
-		System.out.println( "Hello World" );
+	public static void main(String[] args) {
+		System.out.println("Hello World");
 	}
 }
 ```
@@ -104,8 +106,9 @@ System.properties.sort().each { key, value ->
 
 ---V
 
-## Food for thought
-Can you guess what might be the output of this snippet?
+## Trivia
+Guess what might be the output of this Groovy snippet?
+
 ```groovy
 String.methods.each {
     println it
@@ -116,13 +119,13 @@ String.methods.each {
 
 ## Demos
 
-* Cat pictures from Flickr
+* Groovy program to fetch and display kittens from Flickr.
 
-* Build script showdown: Gradle vs. Maven
+* Java build script showdown: Maven vs. Gradle.
 
-* Visualization app built using Groovy and Grails
+* Visualization app built using Groovy and Grails.
 
-* Griffon sample app for loading Database
+* Griffon sample app for loading dummy data to a database.
 
 ---V
 

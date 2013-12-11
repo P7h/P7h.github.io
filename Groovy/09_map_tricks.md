@@ -4,5 +4,3 @@
 * Using map operators
 * Using map methods
 * Maps in action
-
----V

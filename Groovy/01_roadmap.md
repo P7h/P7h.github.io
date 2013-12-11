@@ -13,6 +13,7 @@
 ## What's on the menu?
 
 * <a href="#/3">Agenda</a>
+* <a href="#/4">Plan</a>
 * <a href="#/7">Groovy installation and env setup</a>
 * <a href="#/8">Groovy command line binaries</a>
 * <a href="#/9">Introduction to Groovy
@@ -23,6 +24,7 @@
 * <a href="#/14">Map Tricks</a>
 * <a href="#/15">File Tricks</a>
 * <a href="#/16">Writing and parsing XML or JSON</a>
+* <a href="#/17">Metaprogramming</a>
 
 ---
 
@@ -53,7 +55,7 @@ These slides are done in [Reveal.js](http://lab.hakim.se/reveal-js).
 
 Each module is a "top-level" slide, down arrow to dive deeper.
 
-Press the ESC key to go overview of this presentation.
+Press the ESC key to go to overview of this presentation.
 
 ---V
 

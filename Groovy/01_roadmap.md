@@ -18,10 +18,10 @@
 * <a href="#/8">Groovy command line binaries</a>
 * <a href="#/9">Introduction to Groovy
 * <a href="#/10">Features unique to Groovy [in comparison with Java]</a>
-* <a href="#/11">Ranges</a>
-* <a href="#/12">Closures</a>
-* <a href="#/13">List Tricks</a>
-* <a href="#/14">Map Tricks</a>
+* <a href="#/11">Closures</a>
+* <a href="#/12">Lists</a>
+* <a href="#/13">Ranges</a>
+* <a href="#/14">Maps</a>
 * <a href="#/15">File Tricks</a>
 * <a href="#/16">Writing and parsing XML or JSON</a>
 * <a href="#/17">Metaprogramming</a>

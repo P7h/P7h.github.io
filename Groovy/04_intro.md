@@ -75,6 +75,7 @@ println "Hello World"
 ---V
 ## System Properties
 ### Java
+
 ```java
 import java.util.Iterator;
 import java.util.Properties;
@@ -98,6 +99,7 @@ public class SystemProperties {
 ```
 
 ### Groovy
+
 ```groovy
 System.properties.sort().each { key, value ->
     println "$key = $value"
@@ -119,7 +121,7 @@ String.methods.each {
 
 ## Demos
 
-* Groovy program to fetch and display kittens from Flickr.
+* Groovy program to fetch and display kitten pictures from Flickr.
 
 * Java build script showdown: Maven vs. Gradle.
 

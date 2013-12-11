@@ -1,6 +1,6 @@
 ## Download Groovy
-* Download latest and greatest Groovy binaries from: http://groovy.codehaus.org/Download
-* Latest version - as of this writing [08th December, 2013] - is: [Groovy 2.2.1](http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.2.1.zip)
+* Download latest and greatest Groovy binary from: http://groovy.codehaus.org/Download.
+* Latest version - as of this writing [08th December, 2013] - is: [Groovy 2.2.1](http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.2.1.zip).
 
 ---V
 
@@ -19,6 +19,6 @@ groovy -version
 ---V
 
 ## IDE Plugins for Groovy
-* Groovy plugins for various IDEs
-* Groovy / Grails Tool Suite aka [GGTS](http://spring.io/tools/ggts)
-* Spring Tool Suite aka [STS](http://spring.io/tools/sts)
+* Groovy plugins for various IDEs and Text Editors.
+* Groovy / Grails Tool Suite aka [GGTS](http://spring.io/tools/ggts).
+* Spring Tool Suite aka [STS](http://spring.io/tools/sts).

@@ -111,7 +111,6 @@ def someNumber = 2
 println someNumber.class
 
 //Assign the same variable a different value / datatype.
-//Yes, dynamic!!
 someNumber = 2.0d
 println someNumber.class
 ```

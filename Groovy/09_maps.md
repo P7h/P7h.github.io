@@ -1,4 +1,6 @@
-### Maps
+## Maps
+
+### Simple examples
 
 ```groovy
 def map = [name:"Sachin Tendulkar", likes:"Cricket", id:10]
@@ -20,14 +22,14 @@ assert map == [name:'Sachin Tendulkar', likes:'Cricket', id:10, status:'Retired'
 
 ### Maps
 
-* Iterating a Map. 
+* Iterating a Map
+
 ```groovy
 def map = ['Android': '4.4.2', 
 		   'iPhone': 'iOS7', 
 		   'Windows': 'Win8', 
 		   'BlackBerry': 'BlackBerry10'
 		   ]
-
 map.each { k, v -> 
     println "${k} = ${v}"
 }
@@ -37,8 +39,8 @@ map.each { k, v ->
 
 ### Maps
 
-* _+_ and _<<_ operators can be used to add elements to the Map. 
-* But _<<_ produces a new map while _+_ modifies the Map.
+* **+** and **<<** operators can be used to add elements to the Map. 
+* But **<<** produces a new map while **+** modifies the Map.
 
 ```groovy
 def map01 = [name:"Sachin Tendulkar", likes:"Cricket", id:10, country:"India"]
@@ -58,7 +60,7 @@ println map02
 
 ### Maps
 
-* Variants of iterating a Map. 
+* Variants of iterating a Map
 
 ```groovy
 def p = new StringBuilder()

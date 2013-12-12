@@ -9,6 +9,8 @@
 
 ---V
 
+* Closures without any parameters
+
 ```groovy
 def x = 5, y = 6;
 def printNum {
@@ -30,9 +32,11 @@ printSum 5, 7
 ---V
 
 * Traditional mainstream languages
+
 Data can be stored in variables, passed around, combined in structured ways to form more complex data; code stays put where it is defined.
 
 * Languages supporting closures
+
 Data _and code_ can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.
 
 ```groovy
@@ -80,7 +84,8 @@ String.methods.each {
 * Each subsequent call fills in the next parameter to the right.
 
 ```groovy
-//Tax calculation example
+/* Tax calculation example */
+
 def calculateTax = { taxRate, amount ->
 	amount + (taxRate * amount)
 }

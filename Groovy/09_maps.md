@@ -1,6 +1,6 @@
 ## Maps
 
-### Simple examples
+* Simple examples
 
 ```groovy
 def map = [name:"Sachin Tendulkar", likes:"Cricket", id:10]

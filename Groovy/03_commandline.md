@@ -12,6 +12,7 @@
 ```bash
 groovy HelloWorld.groovy
 groovy HelloWorld
+groovy -e "println 'Hello World'"
 ```
 <br>
 

@@ -2,9 +2,9 @@
 
 * Extensive support building and parsing HTML, XML and JSON.
 
-```groovy
-
 ## Building a XML file
+
+```groovy
 def stringWriter = new StringWriter()
 def builder = new groovy.xml.MarkupBuilder(stringWriter)
 builder.numbers {

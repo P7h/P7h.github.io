@@ -2,7 +2,7 @@
 
 * Extensive support building and parsing HTML, XML and JSON.
 
-## Building a XML file
+### Building a XML file
 
 ```groovy
 def stringWriter = new StringWriter()
@@ -21,9 +21,11 @@ builder.numbers {
 }
 println stringWriter
 ```
+
 ---V
 
-## Building a JSON file
+### Building a JSON file
+
 ```groovy
 import groovy.json.*
 import groovy.xml.*
@@ -59,17 +61,71 @@ println builder.toPrettyString()
 
 ---V
 
+### Reading an XML file
+
 ```xml
 <langs type="languages">
-  <language>Python</language>
-  <language>Groovy</language>
-  <language>Java</language>
+    <language>Python</language>
+    <language>Groovy</language>
+    <language>Java</language>
 </langs>
 ```
 
+```groovy
 def langs = new XmlParser().parse("langs.xml")
 println "type = ${langs.attribute("type")}"
 langs.language.each{
-  println it.text()
+    println it.text()
 }
+```
+
+---V
+
+### Reading an XML file using XMLSlurper
+
+```groovy
+def CAR_RECORDS = '''
+    <records>
+      <car name='HSV Maloo' make='Holden' year='2006'>
+        <country>Australia</country>
+        <record type='speed'>Production Pickup Truck with speed of 271kph</record>
+      </car>
+      <car name='P50' make='Peel' year='1962'>
+        <country>Isle of Man</country>
+        <record type='size'>Smallest Street-Legal Car at 99cm wide and 59 kg in weight</record>
+      </car>
+      <car name='Royale' make='Bugatti' year='1931'>
+        <country>France</country>
+        <record type='price'>Most Valuable Car at $15 million</record>
+      </car>
+    </records>
+  '''
+
+def records = new XmlSlurper().parseText(CAR_RECORDS)
+
+def allNodes = records.depthFirst().collect { 
+    println it
+}
+```
+
+---V
+
+### Reading a JSON file XMLSlurper
+
+```groovy
+import groovy.json.*
+
+def jsonText = '''
+{
+  "limit":{
+    "track":1234
+  }
+}       
+'''
+
+def json = new JsonSlurper().parseText(jsonText)
+
+def limit = json.limit
+println limit.track
+assert limit.track == 1234
 ```

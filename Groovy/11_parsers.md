@@ -110,7 +110,7 @@ def allNodes = records.depthFirst().collect {
 
 ---V
 
-### Reading a JSON file XMLSlurper
+### Reading a JSON file JSONSlurper
 
 ```groovy
 import groovy.json.*
@@ -126,6 +126,5 @@ def jsonText = '''
 def json = new JsonSlurper().parseText(jsonText)
 
 def limit = json.limit
-println limit.track
 assert limit.track == 1234
 ```

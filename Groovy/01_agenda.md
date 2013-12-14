@@ -23,8 +23,9 @@
 * <a href="#/13">Ranges</a>
 * <a href="#/14">Maps</a>
 * <a href="#/15">Input Output</a>
-* <a href="#/16">Writing and parsing XML or JSON</a>
+* <a href="#/16">Building and parsing XML or JSON</a>
 * <a href="#/17">Metaprogramming</a>
+* <a href="#/18">References</a>
 
 ---
 
@@ -54,7 +55,7 @@ You can get the matching source code at http://gist.github.com/P7h
 
 These slides are done in [Reveal.js](http://lab.hakim.se/reveal-js).
 
-Each module is a "top-level" slide, down arrow to dive deeper.
+Each module is a "top-level" slide, click down arrow to dive deeper.
 
 Press the ESC key to go to overview of this presentation.
 

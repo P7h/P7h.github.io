@@ -10,9 +10,9 @@
 
 ### groovy
 ```bash
+groovy -e "println 'Hello World'"
 groovy HelloWorld.groovy
 groovy HelloWorld
-groovy -e "println 'Hello World'"
 ```
 <br>
 

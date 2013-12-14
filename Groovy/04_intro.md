@@ -7,7 +7,7 @@
 * Few demos
 * Books on Groovy
 * Recommended Book
-* Groovy guys on Twitter
+* Groovy Twitterati
 
 ---V
 
@@ -145,6 +145,6 @@ String.methods.each {
 
 ---V
 
-## Groovy guys on Twitter
+## Groovy Twitterati
 
 * [Guillaume Laforge's public Groovy Ecosystem List](https://twitter.com/glaforge/groovy-ecosystem/members)

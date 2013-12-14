@@ -1,5 +1,5 @@
 ## Closures
-* Not to be confused with [Clojure](http://clojure.org), another JVM based Dynamic programming language. 
+* Not to be confused with [Clojure](http://clojure.org), another JVM based dynamic programming language. 
 * Closure is a free-standing, named block of code.
 * It is a behavior that doesn’t have a surrounding class.
 * Helps in greater flexibility.
@@ -31,11 +31,11 @@ printSum 5, 7
 
 ---V
 
-* Traditional mainstream languages
+* **Traditional mainstream languages**
 
 Data can be stored in variables, passed around, combined in structured ways to form more complex data; code stays put where it is defined.
 
-* Languages supporting closures
+* **Languages supporting closures**
 
 Data _and code_ can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.
 

@@ -2,6 +2,8 @@
 
 * Extensive support building and parsing HTML, XML and JSON.
 
+---V
+
 ### Building a XML file
 
 ```groovy
@@ -28,7 +30,6 @@ println stringWriter
 
 ```groovy
 import groovy.json.*
-import groovy.xml.*
  
 class Player {
     String name

@@ -10,29 +10,16 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
-	<!-- <link rel="stylesheet" href="../reveal.js/css/print/print.css"> -->
-	<link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">
+	<link rel="stylesheet" href="../reveal.js/css/theme/moon_custom.css" id="theme">
+	<link rel="stylesheet" href="../reveal.js/css/misc.css">
 
 	<!-- For syntax highlighting -->
 	<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 
-	<style>
-		.highlighted { 
-			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f3ff00, 0 0 70px #f3ff00, 0 0 80px #f3ff00, 0 0 100px #f3ff00, 0 0 150px #f3ff00;
-		}
-		.highlight1 {
-			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px, 0 0 70px, 0 0 80px, 0 0 100px, 0 0 150px;
-		}
-		.blur {
-		   color: transparent;
-		   text-shadow: 0 0 5px rgba(0,0,0,0.5);
-		}
-	</style>
-
 			<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-/*		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>*/
+		<script>
+			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
@@ -45,17 +32,18 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-			<section data-transition="page">
-				<h1 id="bootstrapping-groovy"><span class="highlight1">Bootstrapping Groovy</span></h1>
+			<section>
+				<h1 id="bootstrapping-groovy">Bootstrapping Groovy</h1>
+				<br>
 				
 					<a target="_blank" href="http://P7h.org">Prashanth Babu</a>
 					/
 					<a target="_blank" href="http://twitter.com/P7h">@P7h</a><br><br><br>
-			<blockquote style="background-color:#a0a0a0; opacity:.7;">
-            <p>You can navigate slides with <span class="key">→</span> and <span class="key">↓</span><span> or swipe.</span>
-            <p> <small>Also <span class=key>ESC</span> gives you an bird-eye view.</small>
-        </blockquote>
-				
+			<br><br>
+			<span class="fragment">
+			<small class="hidePrint" style="color:#adadad">Navigate with <span class="key">space</span> or <span class="key">→</span> and <span class="key">↓</span> or <span class="key">PgDown</span> or <span class="key">swipe</span> and</small><br>
+			<small class="hidePrint" style="color:#adadad">hit <span class="key">Esc</span> for a bird's-eye view of presentation.</small>
+			</span>
 			</section>
 			<section data-transition="page">
 					<a target="_blank" href="https://twitter.com/jeremyckahn/statuses/322390046491688960">
@@ -80,7 +68,7 @@
 						<a href="#/6">Groovy installation and env setup</a>
 					</li>
 					<li>
-						<a href="#/7">Groovy command line binaries</a>
+						<a href="#/7">Commands to execute Groovy</a>
 					</li>
 					<li>
 						<a href="#/8">Introduction to Groovy</a></li>
@@ -109,7 +97,7 @@
 							<a href="#/16">Metaprogramming</a>
 						</li>
 						<li>
-							<a href="#/17">References</a>
+							<a href="#/17" target="_self">References</a>
 						</li>
 					</ul>
 				</section>
@@ -144,10 +132,9 @@
 				<span class="blur">
 						Plan<br>
 				</span>
-				<span class="highlight1">
-						Groovy installation and env setup</span><br>
+						Groovy installation and env setup<br>
 				<span class="blur">
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
@@ -165,6 +152,7 @@
 <h2 id="downloadgroovy">Download Groovy</h2>
 
 <ul>
+<li><i>Prerequisite: <a target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a> should be installed on your computer.</i></li>
 <li>Download latest and greatest Groovy binary from: <a target="_blank" href="http://groovy.codehaus.org/Download">http://groovy.codehaus.org/Download</a>.</li>
 <li>Latest version - as of this writing [08th December, 2013] - is: <a target="_blank" href="http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.2.1.zip">Groovy 2.2.1</a>.</li>
 </ul>
@@ -176,7 +164,7 @@
 <ul>
 <li>Uncompress and move the folder to any location on your computer.</li>
 <li>Add GROOVY_HOME env variable pointing to the above location.</li>
-<li>Finally add $GROOVY_HOME/bin in PATH env variable as well.</li>
+<li>Finally append $GROOVY_HOME/bin in PATH env variable for quick-access.</li>
 </ul>
 
 <pre><code class="bash">groovy -version
@@ -205,8 +193,7 @@
 						Plan<br>
 						Groovy installation and env setup<br>
 				</span>
-				<span class="highlight1">
-						Groovy command line binaries<br></span>
+						Commands to execute Groovy<br>
 				<span class="blur">
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
@@ -223,15 +210,15 @@
 
 
 <section data-transition="zoom">
-<h2>Groovy Commands</h2>
+<h2>Commands to execute Groovy</h2>
 
 <ul>
 <li>groovy</li>
 <li>groovyc</li>
-<li>groovydoc</li>
 <li>groovysh</li>
 <li>groovyConsole</li>
 <li>java2groovy</li>
+<li>groovydoc</li>
 </ul>
 
 </section><section data-transition="zoom">
@@ -250,6 +237,26 @@ groovy HelloWorld
 </code></pre>
 </section><section data-transition="zoom">
 
+<h4 id="groovysh">groovysh</h4>
+
+<pre><code class="bash">groovysh
+</code></pre>
+
+<br>
+
+<h4 id="groovyconsole">groovyConsole</h4>
+
+<pre><code class="bash">groovyConsole
+</code></pre>
+
+</section><section data-transition="zoom">
+<h4 id="java2groovy">java2groovy</h4>
+
+<pre><code class="bash">java2groovy HelloWorld.java
+</code></pre>
+
+<br>
+
 <h4 id="groovydoc">groovydoc</h4>
 
 <pre><code class="bash">groovydoc HelloWorld.groovy
@@ -257,34 +264,16 @@ groovy HelloWorld
 
 <br>
 
-<h4 id="groovysh">groovysh</h4>
-
-<pre><code class="bash">groovysh
-</code></pre>
-
-</section><section data-transition="zoom">
-<h4 id="groovyconsole">groovyConsole</h4>
-
-<pre><code class="bash">groovyConsole
-</code></pre>
-
-<br>
-
-<h4 id="java2groovy">java2groovy</h4>
-
-<pre><code class="bash">java2groovy HelloWorld.java
-</code></pre></section></section>
+</section></section>
 
 <section data-transition="linear">
 				<section data-transition="linear" id="intro">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 				</span>
-				<span class="highlight1">
 						Introduction to Groovy<br>
-						</span>
 				<span class="blur">
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
@@ -343,7 +332,7 @@ groovy HelloWorld
 
 </section><section data-transition="linear">
 
-<h2 id="typesystems">Type Systems</h2>
+<h3 id="typesystems">Type Systems</h3>
 
 <ul>
 <li>In programming languages, a <strong>type system</strong> is a collection of rules that assign a property called a <em>type</em> to the various constructs — such as variables, expressions, functions or modules, etc — a computer program is composed of.</li>
@@ -353,25 +342,22 @@ groovy HelloWorld
   Groovy is <a target="_blank" href="http://en.wikipedia.org/wiki/Dynamic_programming_language">dynamically typed programming language</a>; while Java is <a target="_blank" href="http://en.wikipedia.org/wiki/Type_system#Static_type-checking">statically typed programming language</a>.
 </blockquote>
 
-<ul>
-<li>Groovy</li>
-</ul>
+</section><section data-transition="linear">
+<h4 id="groovy">Groovy</h4>
 
 <pre><code class="groovy">def groovyString = "Peter Higgs"
 println groovyString.class
 </code></pre>
 <br>
 
-<ul>
-<li>Java</li>
-</ul>
+<h4 id="groovy">Java</h4>
 
 <pre><code class="java">String javaString = "Satyendra Nath Bose";
 </code></pre>
 
 </section><section data-transition="linear">
 
-<h2 id="obligatoryhelloworld">Obligatory "Hello World"</h2>
+<h3 id="obligatoryhelloworld">Obligatory "Hello World"</h3>
 
 <h4 id="java">Java</h4>
 
@@ -439,7 +425,7 @@ Guess what might be the output of this Groovy snippet?
 <h3 id="demos">Demos</h3>
 
 <ul>
-<li>Groovy program to fetch and display kitten pictures from Flickr.</li>
+<li><a target="_blank" href="http://kousenit.wordpress.com/2013/09/24/making-java-groovy-at-javaone-2013/" target="_blank">Groovy script</a> to fetch and display kitten pictures from Flickr.</li>
 <li>Java build script showdown: Maven vs. Gradle.</li>
 <li>Visualization app built using Groovy and Grails.</li>
 <li>Griffon sample app for loading dummy data to a database.</li>
@@ -474,12 +460,10 @@ Guess what might be the output of this Groovy snippet?
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 				</span>
-				<span class="highlight1">
 						Groovy unique features [Java comparison]<br>
-						</span>
 				<span class="blur">
 						Closures<br>
 						Lists<br>
@@ -764,13 +748,11 @@ println "Name yet again: " + person02
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 				</span>
-				<span class="highlight1">
 						Closures<br>
-						</span>
 				<span class="blur">
 						Lists<br>
 						Ranges<br>
@@ -833,7 +815,7 @@ printSum 5, 7
 <li><strong>Languages supporting closures</strong></li>
 </ul>
 
-<p>Data <em>and code</em> can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.</p>
+<p>Data <u><em>and code</em></u> can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.</p>
 
 <pre><code class="groovy">doubleNum = { 
     num -&gt; num * 2
@@ -923,14 +905,12 @@ assert '02468' == result
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
 				</span>
-				<span class="highlight1">
 						Lists<br>
-						</span>
 				<span class="blur">
 						Ranges<br>
 						Maps<br>
@@ -1055,15 +1035,13 @@ assert uniques == [1, 4, 11] as Set &amp;&amp; dups == [2, 5, 7] as Set
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
 						Lists<br>
 				</span>
-				<span class="highlight1">
 						Ranges<br>
-						</span>
 				<span class="blur">
 						Maps<br>
 						Input Output<br>
@@ -1150,16 +1128,14 @@ switch (years) {
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
 						Lists<br>
 						Ranges<br>
 				</span>
-				<span class="highlight1">
 						Maps<br>
-						</span>
 				<span class="blur">
 						Input Output<br>
 						Building and parsing XML or JSON<br>
@@ -1262,7 +1238,7 @@ assert r.toString() == '1 : a; 2 : b; 3 : c; '
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
@@ -1270,9 +1246,7 @@ assert r.toString() == '1 : a; 2 : b; 3 : c; '
 						Ranges<br>
 						Maps<br>
 				</span>
-				<span class="highlight1">
 						Input Output<br>
-						</span>
 				<span class="blur">
 						Building and parsing XML or JSON<br>
 						Metaprogramming<br>
@@ -1329,7 +1303,7 @@ properties.each { k, v -&gt;
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
@@ -1338,9 +1312,7 @@ properties.each { k, v -&gt;
 						Maps<br>
 						Input Output<br>
 				</span>
-				<span class="highlight1">
 						Building and parsing XML or JSON<br>
-						</span>
 				<span class="blur">
 						Metaprogramming<br>
 						References<br>
@@ -1482,7 +1454,7 @@ assert limit.track == 1234
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
@@ -1492,9 +1464,7 @@ assert limit.track == 1234
 						Input Output<br>
 						Building and parsing XML or JSON<br>
 				</span>
-				<span class="highlight1">
 						Metaprogramming<br>
-						</span>
 				<span class="blur">
 						References<br>
 				</span>
@@ -1545,7 +1515,7 @@ Integer.isEven(2)
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
-						Groovy command line binaries<br>
+						Commands to execute Groovy<br>
 						Introduction to Groovy<br>
 						Groovy unique features [Java comparison]<br>
 						Closures<br>
@@ -1556,9 +1526,7 @@ Integer.isEven(2)
 						Building and parsing XML or JSON<br>
 						Metaprogramming<br>
 				</span>
-				<span class="highlight1">
 						References<br>
-				</span>
 				</section>
 
 <section data-transition="zoom">
@@ -1597,6 +1565,13 @@ Integer.isEven(2)
 
 	</div>
 
+	<div class="presentation-details">
+	    <p>
+	        <a href="http://P7h.org" target="_blank">Prashanth Babu</a> | <a href="http://twitter.com/P7h" target="_blank">@P7h</a>
+	        <span class="hidePrint"> | <a href="https://github.com/P7h" target="_blank">GitHub</a></span>
+	        <span class="hidePrint"> | <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+	    </p>
+    </div>
 	<script src="../reveal.js/lib/js/head.min.js"></script>
 	<script src="../reveal.js/js/reveal.min.js"></script>
 	<script src="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/lib/carousel.js"></script>
@@ -1620,7 +1595,7 @@ Integer.isEven(2)
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition, // default/cube/page/concave/zoom/linear/fade/none
-				backgroundTransition: Reveal.getQueryHash().transition || 'default',
+				backgroundTransition: 'zoom', //Reveal.getQueryHash().transition || 'default',
 
 				// Parallax scrolling
 				//parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
@@ -1629,6 +1604,7 @@ Integer.isEven(2)
 				// Optional libraries used to extend on ../reveal.js
 				dependencies: [
 				{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },				
 				{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 				{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },

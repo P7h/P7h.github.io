@@ -1,53 +1,1607 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<title>Bootstrapping Groovy</title>
-		<meta name="description" content="Bootstrapping Groovy">
-		<meta name="author" content="Prashanth Babu">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">	
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrapping Groovy</title>
+	<meta name="description" content="Bootstrapping Groovy">
+	<meta name="author" content="Prashanth Babu">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+	<style>
+		.highlighted { 
+			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f3ff00, 0 0 70px #f3ff00, 0 0 80px #f3ff00, 0 0 100px #f3ff00, 0 0 150px #f3ff00;
+		}
+		.highlight1 {
+			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px, 0 0 70px, 0 0 80px, 0 0 100px, 0 0 150px;
+		}
+		.blur {
+		   color: transparent;
+		   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+		}
+	</style>
 
-	<body>
+			<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+/*		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>*/
 
-		<div class="reveal">
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section data-transition="page" data-markdown="01_agenda.md" data-vertical="^---V"></section>
-				<section data-transition="concave" data-markdown="02_install.md" data-vertical="^---V"></section>
-				<section data-transition="zoom" data-markdown="03_commandline.md" data-vertical="^---V"></section>
-				<section data-transition="linear" data-markdown="04_intro.md" data-vertical="^---V"></section>
-				<section data-transition="fade" data-markdown="05_features.md" data-vertical="^---V"></section>
-				<section data-transition="page" data-markdown="06_closures.md" data-vertical="^---V"></section>
-				<section data-transition="concave" data-markdown="07_lists.md" data-vertical="^---V"></section>
-				<section data-transition="zoom" data-markdown="08_ranges.md" data-vertical="^---V"></section>
-				<section data-transition="linear" data-markdown="09_maps.md" data-vertical="^---V"></section>
-				<section data-transition="fade" data-markdown="10_io.md" data-vertical="^---V"></section>
-				<section data-transition="page" data-markdown="11_xmljson.md" data-vertical="^---V"></section>
-				<section data-transition="concave" data-markdown="12_metaprog.md" data-vertical="^---V"></section>
-				<section data-transition="page" data-markdown="13_references.md" data-vertical="^---V"></section>
-				<section data-transition="zoom" data-markdown="14_thanks.md" data-vertical="^---V"></section>
-			</div>
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1 id="bootstrapping-groovy"><span class="highlight1">Bootstrapping Groovy</span></h1>
+				
+					<a target="_blank" href="http://P7h.org">Prashanth Babu</a>
+					/
+					<a target="_blank" href="http://twitter.com/P7h">@P7h</a><br><br><br>
+			<blockquote style="background-color:#a0a0a0; opacity:.7;">
+            <p>You can navigate slides with <span class="key">→</span> and <span class="key">↓</span><span> or swipe.</span>
+            <p> <small>Also <span class=key>ESC</span> gives you an bird-eye view.</small>
+        </blockquote>
+				
+			</section>
+			<section>
+					<a target="_blank" href="https://twitter.com/jeremyckahn/statuses/322390046491688960">
+						<img src="https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Tweet_Jeremy.png" alt="Jeremy Tweet" /></a>
+
+				<!--
+			    <div class="container"><div class="carousel">
+				<A href="https://github.com/P7h" screenshot></A>
+				<A href="https://twitter.com/P7h" screenshot></A>
+				<A href="https://github.com/P7h" screenshot></A>
+				    </div></div>
+					 -->
+				
+			</section>
+			<section>
+				<h2 id="whats-on-the-menu">What's on the menu?</h2>
+				<ul>
+					<li>
+						<a href="#/3">Plan</a>
+					</li>
+					<li>
+						<a href="#/6">Groovy installation and env setup</a>
+					</li>
+					<li>
+						<a href="#/7">Groovy command line binaries</a>
+					</li>
+					<li>
+						<a href="#/8">Introduction to Groovy</a></li>
+						<li>
+						<a href="#/9">Groovy unique features [Java comparison]</a>
+						</li>
+						<li>
+							<a href="#/10">Closures</a>
+						</li>
+						<li>
+							<a href="#/11">Lists</a>
+						</li>
+						<li>
+							<a href="#/12">Ranges</a>
+						</li>
+						<li>
+							<a href="#/13">Maps</a>
+						</li>
+						<li>
+							<a href="#/14">Input Output</a>
+						</li>
+						<li>
+							<a href="#/15">Building and parsing XML or JSON</a>
+						</li>
+						<li>
+							<a href="#/16">Metaprogramming</a>
+						</li>
+						<li>
+							<a href="#/17">References</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2 id="plan">Plan</h2>
+					<ul>
+						<li>Bird's eye view of Groovy</li>
+						<li>Introduce few concepts</li>
+						<li>Give sample code</li>
+						<li>Do some exercises</li>
+						<li>Explore this presentation yourself</li>
+					</ul>
+			</section>
+			<section>
+				<blockquote>
+					Nothing is taught until something is learned.
+				</blockquote>
+			</section>
+			<section>
+				<h2 id="about-these-slides">About these slides</h2>
+				
+					You can get to these slides at
+					<a target="_blank" href="http://P7h.github.io/Groovy">http://P7h.github.io/Groovy</a>.<br>
+				
+				
+					You can get the matching source code at
+					<a target="_blank" href="http://gist.github.com/P7h">http://gist.github.com/P7h</a>.
+				
+			</section>
+			<section id="install">
+				<section id="agenda02">
+				<span class="blur">
+						Plan<br>
+				</span>
+				<span class="highlight1">
+						Groovy installation and env setup</span><br>
+				<span class="blur">
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="downloadgroovy">Download Groovy</h2>
+
+<ul>
+<li>Download latest and greatest Groovy binary from: <a target="_blank" href="http://groovy.codehaus.org/Download">http://groovy.codehaus.org/Download</a>.</li>
+<li>Latest version - as of this writing [08th December, 2013] - is: <a target="_blank" href="http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.2.1.zip">Groovy 2.2.1</a>.</li>
+</ul>
+
+</section><section>
+
+<h2 id="groovyinstallationandenvsetup">Groovy Installation and env setup</h2>
+
+<ul>
+<li>Uncompress and move the folder to any location on your computer.</li>
+<li>Add GROOVY_HOME env variable pointing to the above location.</li>
+<li>Finally add $GROOVY_HOME/bin in PATH env variable as well.</li>
+</ul>
+
+<pre><code class="bash">groovy -version
+</code></pre>
+
+<br>
+
+<blockquote class="fragment">
+  Hat tip: <em>~/.groovy/lib</em> folder
+</blockquote>
+
+</section><section>
+
+<h2 id="idepluginsforgroovy">IDE Plugins for Groovy</h2>
+
+<ul>
+<li>Groovy plugins for various IDEs and Text Editors.</li>
+<li>Groovy / Grails Tool Suite aka <a target="_blank" href="http://spring.io/tools/ggts">GGTS</a>.</li>
+<li>Spring Tool Suite aka <a target="_blank" href="http://spring.io/tools/sts">STS</a>.</li>
+</ul>
+</section></section>
+
+<section id="commandline">
+				<section id="agenda03">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+				</span>
+				<span class="highlight1">
+						Groovy command line binaries<br></span>
+				<span class="blur">
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+
+<section>
+<h2 id="groovycommands">Groovy Commands</h2>
+
+<ul>
+<li>groovy</li>
+<li>groovyc</li>
+<li>groovydoc</li>
+<li>groovysh</li>
+<li>groovyConsole</li>
+<li>java2groovy</li>
+</ul>
+
+</section><section>
+<h4 class="fragment" data-fragment-index="0" id="groovy">groovy</h4>
+
+<pre class="fragment" data-fragment-index="0"><code class="bash">groovy -e "println 'Hello World'"
+groovy HelloWorld.groovy
+groovy HelloWorld
+</code></pre>
+
+<br>
+
+<h4 class="fragment" data-fragment-index="1" id="groovyc">groovyc</h4>
+
+<pre class="fragment" data-fragment-index="1"><code class="bash">groovyc HelloWorld.groovy
+</code></pre>
+</section><section>
+
+<h4 class="fragment" data-fragment-index="0" id="groovydoc">groovydoc</h4>
+
+<pre class="fragment" data-fragment-index="0"><code class="bash">groovydoc HelloWorld.groovy
+</code></pre>
+
+<br>
+
+<h4 class="fragment" data-fragment-index="4" id="groovysh">groovysh</h4>
+
+<pre class="fragment" data-fragment-index="4"><code class="bash">groovysh
+</code></pre>
+
+</section><section>
+<h4 class="fragment" data-fragment-index="5" id="groovyconsole">groovyConsole</h4>
+
+<pre class="fragment" data-fragment-index="5"><code class="bash">groovyConsole
+</code></pre>
+
+<br>
+
+<h4 class="fragment" data-fragment-index="6" id="java2groovy">java2groovy</h4>
+
+<pre class="fragment" data-fragment-index="6"><code class="bash">java2groovy HelloWorld.java
+</code></pre></section></section>
+
+<section id="intro">
+				<section id="agenda04">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+				</span>
+				<span class="highlight1">
+						Introduction to Groovy<br>
+						</span>
+				<span class="blur">
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+<section>
+
+<h2 id="introduction">Introduction</h2>
+
+<ul>
+<li>What is Groovy?</li>
+<li>Type Systems</li>
+<li>Code snippet showdown: Groovy vs. Java</li>
+<li>How Groovy helps?</li>
+<li>Few demos</li>
+<li>Books on Groovy</li>
+<li>Recommended Book</li>
+<li>Groovy Twitterati</li>
+</ul>
+
+</section><section>
+
+<h2 id="tip">Tip</h2>
+
+<blockquote>
+  Any Java file can be renamed as a Groovy file. And it will compile and execute just as fine.
+  Groovy runs on the JVM.
+</blockquote>
+
+</section><section>
+
+<h2 id="groovy">Groovy</h2>
+
+<blockquote>
+  Groovy is like a super version of Java. It can leverage Java's enterprise capabilities but also has cool productivity features like closures, DSL support, builders and dynamic typing.
+</blockquote>
+
+<br>
+
+<pre class="fragment"><code class="groovy">Groovy = Java – boiler plate code
+              + mostly dynamic typing
+              + closures
+              + domain specific languages
+              + builders
+              + metaprogramming
+              + GDK library
+</code></pre>
+
+</section><section>
+
+<h2 id="typesystems">Type Systems</h2>
+
+<ul>
+<li>In programming languages, a <strong>type system</strong> is a collection of rules that assign a property called a <em>type</em> to the various constructs — such as variables, expressions, functions or modules, etc — a computer program is composed of.</li>
+</ul>
+
+<blockquote class="fragment" data-fragment-index="1">
+  Groovy is <a target="_blank" href="http://en.wikipedia.org/wiki/Dynamic_programming_language">dynamically typed programming language</a>; while Java is <a target="_blank" href="http://en.wikipedia.org/wiki/Type_system#Static_type-checking">statically typed programming language</a>.
+</blockquote>
+
+<ul class="fragment" data-fragment-index="2">
+<li>Groovy</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">def groovyString = "Peter Higgs"
+println groovyString.class
+</code></pre>
+<br>
+
+<ul class="fragment" data-fragment-index="3">
+<li>Java</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="3"><code class="java">String javaString = "Satyendra Nath Bose";
+</code></pre>
+
+</section><section>
+
+<h2 class="fragment" data-fragment-index="1" id="obligatoryhelloworld">Obligatory "Hello World"</h2>
+
+<h4 class="fragment" data-fragment-index="1" id="java">Java</h4>
+
+<pre class="fragment" data-fragment-index="1" rel="Java"><code class="java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+</code></pre>
+
+<br>
+
+<h4 class="fragment" data-fragment-index="2" id="groovy">Groovy</h4>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">println "Hello World"
+</code></pre>
+
+</section><section>
+
+<h3 class="fragment" data-fragment-index="1" id="systemproperties">System Properties</h3>
+
+<h4 class="fragment" data-fragment-index="1" class="fragment" data-fragment-index="1" id="java">Java</h4>
+
+<pre class="fragment" data-fragment-index="1"><code class="java">import java.util.Iterator;
+import java.util.Properties;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class SystemProperties {
+    public static void main(String[] args) {
+        Properties properties = System.getProperties();
+        SortedMap sortedSystemProperties = new TreeMap(properties);
+        Set keySet = sortedSystemProperties.keySet();
+        Iterator iterator = keySet.iterator();
+        String key = null;
+        while (iterator.hasNext()) {
+            key = (String) iterator.next();
+            System.out.println(key + " = " + properties.getProperty(key));
+        }
+    }
+}
+</code></pre>
+
+<h4 class="fragment" data-fragment-index="2" id="groovy">Groovy</h4>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">System.properties.sort().each { key, value -&gt;
+    println "$key = $value"
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="trivia">Trivia</h3>
+
+Guess what might be the output of this Groovy snippet?
+
+<pre><code class="groovy">String.methods.each {
+    println it
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="demos">Demos</h3>
+
+<ul>
+<li>Groovy program to fetch and display kitten pictures from Flickr.</li>
+<li>Java build script showdown: Maven vs. Gradle.</li>
+<li>Visualization app built using Groovy and Grails.</li>
+<li>Griffon sample app for loading dummy data to a database.</li>
+</ul>
+
+</section><section>
+
+<h3 id="booksongroovy">Books on Groovy</h3>
+
+<a target="_blank" href="http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&amp;lo=stripbooks"><img src="https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Groovy_Books.png" alt="Groovy Books" title="" /></a>
+<a target="_blank" href="http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&amp;lo=stripbooks">Various Groovy Books on Amazon</a>
+
+</section><section>
+
+<h3 id="athoroughintroductiontogroovy">A thorough introduction to Groovy</h3>
+
+<a target="_blank" href="http://www.manning.com/koenig"><img src="https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/GinA.png" alt="Best book on Groovy" title="" /></a><br>
+
+<a target="_blank" href="http://www.manning.com/koenig">Groovy in Action aka GinA</a>
+
+</section><section>
+
+<h3 id="groovytwitterati">Groovy Twitterati</h3>
+
+<ul>
+<li><a target="_blank" href="https://twitter.com/glaforge/groovy-ecosystem/members">Guillaume Laforge's public Groovy Ecosystem List</a></li>
+</ul></section></section>
+
+
+<section id="groovyfeatures">
+				<section id="agenda05">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+				</span>
+				<span class="highlight1">
+						Groovy unique features [Java comparison]<br>
+						</span>
+				<span class="blur">
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="groovyfeatures">Groovy Features</h2>
+
+<ul>
+<li>Automatic imports</li>
+<li>Import aliasing</li>
+<li>Optional semicolons &amp; parens</li>
+<li>Optional return statements</li>
+<li>Optional datatype declaration</li>
+<li>Operator overloading</li>
+<li>Safe dereferencing</li>
+<li>Autoboxing</li>
+<li>Groovy Truth</li>
+<li>Embedded Quotes &amp; Heredocs</li>
+<li>GStrings</li>
+<li>POJO vs. POGO</li>
+</ul>
+
+</section><section>
+
+<ul class="fragment" data-fragment-index="1">
+<li>Automatic imports</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="1"><code class="groovy">import java.lang.*
+import java.util.*
+import java.net.*
+import java.io.*
+import java.math.BigInteger
+import java.math.BigDecimal
+
+import groovy.lang.*
+import groovy.util.*
+</code></pre>
+
+<ul class="fragment" data-fragment-index="2">
+<li>Import aliasing</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">import java.text.SimpleDateFormat as SDF
+SDF sdf = new SDF("MM/dd/yyyy")
+println sdf.format(new Date())
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>Optional semicolons and parentheses</li>
+<li>Optional return statements</li>
+</ul>
+
+<pre><code class="groovy">firstName = "James"
+lastName = "Strachan"
+
+String getFullName() {
+  "${firstName} ${lastName}"
+}
+println getFullName()
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>Optional datatype declaration</li>
+<li>Operator overloading</li>
+</ul>
+
+<pre><code class="groovy">def date = new Date()
+date.next()
+(1..3).each { 
+    println date++
+}
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>Safe dereferencing</li>
+</ul>
+
+<p>Groovy</p>
+
+<pre><code class="groovy">def str = "A String"
+println str.size()
+
+str = null
+str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size() 
+           // on null object at ConsoleScript3.run(ConsoleScript3:5)
+println str?.size()
+</code></pre>
+
+</section><section>
+<li class="fragment" data-fragment-index="1">Safe dereferencing</li>
+<p class="fragment" data-fragment-index="1">Java</p>
+
+<pre class="fragment" data-fragment-index="1"><code class="java">if (order != null) {
+    if (order.getCustomer() != null) {
+        if (order.getCustomer().getAddress() != null) {
+            System.out.println(order.getCustomer().getAddress());
+        }
+    }
+}
+</code></pre>
+
+<br>
+<p class="fragment" data-fragment-index="2">
+Groovy</p>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">println order?.customer?.address
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>Autoboxing</li>
+</ul>
+
+<pre><code class="groovy">def someNumber = 2
+println someNumber.class
+
+//Assign the same variable a different value or datatype.
+someNumber = 2.0d
+println someNumber.class
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>Groovy Truth</li>
+</ul>
+
+<pre><code class="groovy">//true
+if(1) // any non-zero value is true
+if(-1)
+if(!null) // any non-null value is true
+if( "John" ) // any non-empty string is true
+Map family = [dad: "John" , mom: "Jane" ]
+if(family) // true since the map is populated
+String[] sa = new String[1]
+if(sa) // true since the array length is greater than 0
+StringBuilder sb = new StringBuilder()
+sb.append( "Hi" )
+if(sb) // true since the StringBuilder is populated
+
+//false
+if(0) // zero is false
+if(null) // null is false
+if( "" ) // empty strings are false
+Map family = [:]
+if(family) // false since the map is empty
+String[] sa = new String[0]
+if(sa) // false since the array is zero length
+StringBuilder sb = new StringBuilder()
+if(sb) // false since the StringBuilder is empty
+</code></pre>
+
+</section><section>
+
+<ul class="fragment" data-fragment-index="1">
+<li>Embedded Quotes</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="1"><code class="groovy">def s1 = 'You either die a "hero" or you live long enough to see yourself become the "villain".'
+def s2 = "You either die a 'hero' or you live long enough to see yourself become the 'villain'."
+def s3 = "You either die a \"hero\" or you live long enough to see yourself become the \"villain\"."
+</code></pre>
+
+<ul class="fragment" data-fragment-index="2">
+<li>Heredocs</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">String groovyHereDocs1 = """Harvey said "You either die a hero or 
+you live long enough to see yourself become the villain.""""
+def groovyHereDocs2 = '''You either die a hero or 
+you live long enough to see yourself become the villain.'''
+println groovyHereDocs2.class
+</code></pre>
+
+<ul class="fragment" data-fragment-index="3">
+<li>GStrings</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="3"><code class="groovy">def firstName = "James"
+def lastName = "Strachan"
+println "Ahoy ${firstName} ${lastName}, today is ${new Date()}"
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>POJO</li>
+</ul>
+
+<pre><code class="java">public class Person {
+
+    private String firstName;
+    private String lastName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String toString() {
+        return firstName + " " + lastName;
+    }
+}
+Person person = new Person();
+person.setFirstName("James");
+person.setLastName("Strachan");
+
+System.out.println("Name: " + person);
+</code></pre>
+
+</section><section>
+
+<ul class="fragment" data-fragment-index="1">
+<li>POGO</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="1"><code class="groovy">class Person {
+    String firstName
+    String lastName
+    String toString() {
+        firstName + " " + lastName
+    }
+}
+//One way of instantiating an object in Groovy.
+def person01 = new Person()
+person01.firstName = "James"
+person01.lastName = "Strachan"
+println "Name: " + person01
+</code></pre>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">//Another way of instantiating an object in Groovy.
+person01.with {
+    firstName = "Guillaume"
+    lastName = "Laforge"
+}
+println "Name again: " + person01
+</code></pre>
+
+<pre class="fragment" data-fragment-index="3"><code class="groovy">//Yet another way of instantiating an object in Groovy.
+def person02 = new Person(lastName: "Rocher", firstName: "Graeme")
+println "Name yet again: " + person02
+</code></pre>
+
+</section><section>
+
+<ul>
+<li>Groovy coding guidelines</li>
+</ul>
+
+<p><a target="_blank" href="http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers">Groovy style and language feature guidelines for Java developers</a></p></section></section>
+
+<section id="closures">
+
+				<section id="agenda06">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+				</span>
+				<span class="highlight1">
+						Closures<br>
+						</span>
+				<span class="blur">
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+
+<section>
+<h2 id="closures">Closures</h2>
+
+<ul>
+<li>Not to be confused with <a target="_blank" href="http://clojure.org">Clojure</a>, another JVM based dynamic programming language. </li>
+<li>Closure is a free-standing, named block of code.</li>
+<li>It is a behavior that doesn’t have a surrounding class.</li>
+<li>Helps in greater flexibility.</li>
+<li>Metaprogramming to enhance existing libraries.</li>
+<li>As of this writing, Java does not have this feature.</li>
+<li>Java 8 is scheduled to come with this most wanted feature coined as <a target="_blank" href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">Lambdas</a> in March, 2014.</li>
+</ul>
+
+</section><section>
+
+<ul class="fragment" data-fragment-index="1">
+<li>Closures without any parameters</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="1"><code class="groovy">def x = 5, y = 6;
+def printNum {
+    println x + " " + y
+}
+printNum()
+</code></pre>
+
+<br>
+
+<ul class="fragment" data-fragment-index="2">
+<li>Closures with parameters</li>
+</ul>
+
+<pre class="fragment" data-fragment-index="2"><code class="groovy">def printSum = { a, b -&gt; 
+    print a + b
+}
+printSum 5, 7
+</code></pre>
+
+</section><section>
+
+<ul class="fragment" data-fragment-index="1">
+<li><strong>Traditional mainstream languages</strong></li>
+</ul>
+
+<p class="fragment" data-fragment-index="1">Data can be stored in variables, passed around, combined in structured ways to form more complex data; code stays put where it is defined.</p>
+
+<ul class="fragment" data-fragment-index="2">
+<li><strong>Languages supporting closures</strong></li>
+</ul>
+
+<p class="fragment" data-fragment-index="2">Data <em>and code</em> can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.</p>
+
+<pre class="fragment" data-fragment-index="3"><code class="groovy">doubleNum = { 
+    num -&gt; num * 2
+}
+assert doubleNum(3) == 6
+
+def processThenPrint = { num, closure -&gt;
+    num = closure(num);
+}
+assert processThenPrint(3, doubleNum) == 6
+assert processThenPrint(10) { it / 2 } == 5
+</code></pre>
+
+</section><section>
+
+<h3 id="implicitvariables">Implicit variables</h3>
+<ul>
+<li>A Closure that takes a single argument may omit the parameter definition of the Closure.</li>
+</ul>
+
+<pre><code class="groovy">def printStr = { 
+    print it
+}
+printStr "Print but with a custom method"
+</code></pre>
+
+
+<pre><code class="groovy">String.methods.each {
+    println it
+}
+</code></pre>
+
+<ul>
+<li><em>More about Closures in List and Map Comprehensions later.</em></li>
+</ul>
+
+</section><section>
+
+<h3 id="curryinghttpenwikipediaorgwikicurrying"><a target="_blank" href="http://en.wikipedia.org/wiki/Currying">Currying</a></h3>
+
+<ul>
+<li>Transform function with particular number of parameters and returns a function with some of the parameter values fixed, creating a new function.</li>
+<li>Curry as many parameters as required.</li>
+<li>The first curry call fills in the leftmost parameter.</li>
+<li>Each subsequent call fills in the next parameter to the right.</li>
+</ul>
+
+<pre><code class="groovy">/* Tax calculation example */
+
+def calculateTax = { taxRate, amount -&gt;
+    amount + (taxRate * amount)
+}
+
+def tax = calculateTax.curry(0.1)
+
+(10..15).each {
+    println "Total cost: ${tax(it)}"
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="loopvariants">Loop variants</h3>
+
+<pre><code class="groovy">def result = ''
+def compute = { 
+    if (!it) {
+        result = '0'
+    } else {
+        result += it
+    }
+}
+
+5.times compute
+assert '01234' == result
+
+0.upto 7, compute
+assert '01234567' == result
+
+0.step 10, 2, compute
+assert '02468' == result
+</code></pre></section></section>
+
+
+<section id="lists">
+				<section id="agenda07">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+				</span>
+				<span class="highlight1">
+						Lists<br>
+						</span>
+				<span class="blur">
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="lists">Lists</h2>
+
+<pre><code class="groovy">def list = [1, 2, 3, 4]
+assert list.size == 4
+assert list.size() == 4
+assert list.class == ArrayList
+</code></pre>
+
+<p><br></p>
+
+<pre><code class="groovy">def list = []
+assert list.size() == 0
+list &lt;&lt; 5
+assert list.size() == 1
+list &lt;&lt; 'a' &lt;&lt; 'e' &lt;&lt; 'i'
+assert list == [5,  'a', 'e', 'i']
+</code></pre>
+
+</section><section>
+
+<h2 id="lists">Lists</h2>
+
+<pre><code class="groovy">assert [0, 1, 2] + 3 + [4, 5] + 6 == [0, 1, 2, 3, 4, 5, 6]
+assert [0, 1, 2].plus(3).plus([4, 5]).plus(6) == [0, 1, 2, 3, 4, 5, 6]
+
+def list = [0, 1, 2, 3]
+list += 4
+list += [5, 6]
+assert list == [0, 1, 2, 3, 4, 5, 6]
+assert list[3] == 3
+assert list.getAt(5) == 5
+
+list.putAt(5, -5)
+assert list[5] == -5
+assert list[-4] == 3
+assert list[-4] * 2 == 6
+assert list * 2 == [0, 1, 2, 3, 4, -5, 6, 0, 1, 2, 3, 4, -5, 6]
+
+assert ('a'..'g')[3..5] == ['d', 'e', 'f']
+</code></pre>
+
+</section><section>
+
+<h2 id="lists">Lists</h2>
+
+<pre><code class="groovy">assert [1,[2,3]].flatten() == [1,2,3]
+assert [1,2,3].intersect([4,3,1])== [3,1]
+assert [1,2,3].disjoint([4,5,6])
+
+list = [1,2,3]
+popped = list.pop()
+assert popped == 3
+assert list == [1,2]
+
+assert [1,2].reverse() == [2,1]
+assert [3,1,2].sort() == [1,2,3]
+</code></pre>
+
+</section><section>
+
+<h2 id="lists">Lists</h2>
+
+<pre><code class="groovy">def list = [1, 2, 3, 4, 5]
+def sublist = list.subList(2, 4)
+sublist[0] = 9
+assert list == [1, 2, 9, 4, 5]
+list[3] = 11
+assert sublist == [9, 11]
+</code></pre>
+
+<p><br></p>
+
+<pre><code class="groovy">def range = ('a'..'f')
+range.eachWithIndex{ it, i -&gt; 
+    println "$i: $it"
+}
+assert range.join(', ') == 'a, b, c, d, e, f'
+</code></pre>
+
+</section><section>
+
+<h2 id="lists">Lists</h2>
+
+<ul>
+<li>Double each element in a List using a closure</li>
+</ul>
+
+<pre><code class="groovy">def doubled = [1,2,3].collect { item -&gt;
+    item * 2
+}
+assert doubled == [2,4,6]
+</code></pre>
+
+<p><br></p>
+
+<ul>
+<li>Divide a list into 2 lists with one list containing only unique elements and another only duplicates.</li>
+</ul>
+
+<pre><code class="groovy">list=[1, 2, 7, 2, 2, 4, 7, 11, 5, 2, 5]
+def uniques = [] as Set, dups = [] as Set
+list.each {
+    uniques.add(it) || dups.add(it)
+}
+uniques.removeAll(dups)
+assert uniques == [1, 4, 11] as Set &amp;&amp; dups == [2, 5, 7] as Set
+</code></pre></section></section>
+
+<section id="ranges">
+				<section id="agenda08">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+				</span>
+				<span class="highlight1">
+						Ranges<br>
+						</span>
+				<span class="blur">
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="ranges">Ranges</h2>
+
+<ul>
+<li>Groovy offers a native datatype for Ranges.</li>
+<li>Ranges are specified using the double-dot range operator .. between the left and right bounds.</li>
+</ul>
+
+<pre><code class="groovy">def range = 1..10
+println range.class
+println range instanceof List
+range = 1..&lt;10
+def alphabets = 'a'..'z'
+println alphabets.class
+assert alphabets.contains('b') 
+alphabets.each {
+    print it
+}
+</code></pre>
+
+<pre><code class="groovy">IntRange.methods.each { 
+    println it
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="fewothermethodsofrange">Few other methods of Range</h3>
+
+<pre><code class="groovy">def i = 1..5
+println i.size()
+println i.from
+println i.to
+println i.contains(1)
+println i.contains(-9)
+println i.reverse()
+</code></pre>
+
+<p><br></p>
+
+<pre><code class="groovy">def today = new Date()
+def nextWeek = today + 7
+(today..nextWeek).each {
+    println it
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="rangesinswitchcases">Ranges in switch cases</h3>
+
+<pre><code class="groovy">def stage = ""
+def years = 58
+switch (years) {
+   case 1..3:
+       stage = "toddler"
+       break;
+   case 3..15:
+       stage = "school"
+       break;
+   case 16..22:
+       stage = "college"
+       break;
+   case 22..58:
+       stage = "job"
+       break;
+   default:
+       stage = "retired"
+}
+</code></pre></section></section>
+
+
+<section id="maps">
+				<section id="agenda09">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+				</span>
+				<span class="highlight1">
+						Maps<br>
+						</span>
+				<span class="blur">
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="maps">Maps</h2>
+
+<ul>
+<li>Simple examples</li>
+</ul>
+
+<pre><code class="groovy">def map = [name:"Sachin Tendulkar", likes:"Cricket", id:10]
+assert map instanceof java.util.Map
+
+assert map.get("name") == "Sachin Tendulkar"
+assert map["name"] == "Sachin Tendulkar"
+assert map.name == "Sachin Tendulkar"
+
+assert map.get("id") == 10
+assert map['id'] == 10
+assert map.id == 10
+
+map['status'] = "Retired"
+assert map == [name:'Sachin Tendulkar', likes:'Cricket', id:10, status:'Retired']
+</code></pre>
+
+</section><section>
+
+<h3 id="maps">Maps</h3>
+
+<ul>
+<li>Iterating a Map</li>
+</ul>
+
+<pre><code class="groovy">def map = ['Android': '4.4.2', 
+           'iPhone': 'iOS7', 
+           'Windows': 'Win8', 
+           'BlackBerry': 'BlackBerry10'
+           ]
+map.each { k, v -&gt; 
+    println "${k} = ${v}"
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="maps">Maps</h3>
+
+<ul>
+<li><strong>+</strong> and <strong>&lt;&lt;</strong> operators can be used to add elements to the Map. </li>
+<li>But <strong>&lt;&lt;</strong> produces a new map while <strong>+</strong> modifies the Map.</li>
+</ul>
+
+<pre><code class="groovy">def map01 = [name:"Sachin Tendulkar", likes:"Cricket", id:10, country:"India"]
+println map01
+
+map01 &lt;&lt; [name:"Roger Federer", likes:"Tennis", id:101]
+println map01
+
+def map02 = [name:"Sachin Tendulkar", likes:"Cricket", id:10, status: "Retired"]
+println map02
+
+map02 += map01
+println map02
+</code></pre>
+
+</section><section>
+
+<h3 id="maps">Maps</h3>
+
+<ul>
+<li>Variants of iterating a Map</li>
+</ul>
+
+<pre><code class="groovy">def p = new StringBuilder()
+[1:'a', 2:'b', 3:'c'].each {
+    p &lt;&lt; it.key + ': ' + it.value + '; '
+}
+assert p.toString() == '1: a; 2: b; 3: c; '
+
+def q = new StringBuilder()
+[1:'a', 2:'b', 3:'c'].each { k, v -&gt;
+    q &lt;&lt; k + ': ' + v  + '; '
+}
+assert q.toString() == '1: a; 2: b; 3: c; '
+
+def r = new StringBuilder()
+[1:'a', 2:'b', 3:'c'].eachWithIndex { it, i -&gt;
+  r &lt;&lt; it.key + ' : ' + it.value + '; '
+}
+assert r.toString() == '1 : a; 2 : b; 3 : c; '
+</code></pre></section></section>
+
+			<section id="io">
+				<section id="agenda10">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+				</span>
+				<span class="highlight1">
+						Input Output<br>
+						</span>
+				<span class="blur">
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+			<section>
+					<h2 id="input-output">Input Output</h2>
+					<h4 id="read-a-file-line-by-line">Read a file line-by-line</h4>
+					<pre class="groovy"><code>new File(&quot;ReadTheFile.txt&quot;).eachLine { line -&gt; 
+    println(line)
+}</code></pre>
+				</section>
+				<section>
+					<h4 id="read-a-file-with-a-reader">Read a file with a Reader</h4>
+					<pre class="groovy"><code>def count=0, MAXSIZE=100
+new File(&quot;ReadTheFile.txt&quot;).withReader { reader -&gt;
+  while (reader.readLine() != null) {
+    if (++count &gt; MAXSIZE) {
+        println &quot;Read 100 lines already!&quot;
+        break
+    }
+  }
+}</code></pre>
+				</section>
+				<section>
+					<h4 id="write-a-file-with-a-writer">Write a file with a Writer</h4>
+					<pre class="groovy"><code>def fields = [&quot;a&quot;:&quot;1&quot;, &quot;b&quot;:&quot;2&quot;, &quot;c&quot;:&quot;3&quot;]
+new File(&quot;WriteTheFile.ini&quot;).withWriter { out -&gt;
+    fields.each() { key, value -&gt;
+        out.writeLine(&quot;${key}=${value}&quot;)
+    }
+}</code></pre>
+				</section>
+				<section>
+					<h4 id="loading-a-properties-file-in-groovy">Loading a properties file in Groovy</h4>
+				<pre class="properties"><code>java:oracle</code></pre>
+					<pre class="groovy"><code>def properties = new Properties()
+new File(&quot;config.properties&quot;).withInputStream { 
+  stream -&gt; properties.load(stream) 
+}
+
+println &quot;java = &quot; + properties[&quot;java&quot;]
+
+properties.each { k, v -&gt; 
+    println &quot;${k} = ${v}&quot;
+}</code></pre>
+				</section>
+			</section>
+
+<section id="buildersandparser">
+				<section id="agenda11">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+				</span>
+				<span class="highlight1">
+						Building and parsing XML or JSON<br>
+						</span>
+				<span class="blur">
+						Metaprogramming<br>
+						References<br>
+				</span>
+				</section>
+
+
+<section>
+<h2 id="buildersandparsers">Builders and Parsers</h2>
+
+<ul>
+<li>Extensive support building and parsing HTML, XML and JSON.</li>
+</ul>
+
+</section><section>
+
+<h3 id="buildingaxmlfile">Building a XML file</h3>
+
+<pre><code class="groovy">def stringWriter = new StringWriter()
+def builder = new groovy.xml.MarkupBuilder(stringWriter)
+builder.numbers {
+    description 'Squares and factors of 10..15'
+    for (i in 10..15) {
+        number (value: i, square: i*i) {
+            for (j in 2..&lt;i) {
+                if (i % j == 0) {
+                    factor (value: j)
+                }
+            }
+        }
+    }
+}
+println stringWriter
+</code></pre>
+
+</section><section>
+
+<h3 id="buildingajsonfile">Building a JSON file</h3>
+
+<pre><code class="groovy">import groovy.json.*
+
+class Player {
+    String name
+    List faveGrounds = []
+}
+
+class FaveGround {
+    String ground
+    String city
+}
+
+Player playr = new Player(name:"Sachin Tendulkar")
+playr.faveGrounds &lt;&lt; new FaveGround(ground: "Wankede", city:"Mumbai")
+playr.faveGrounds &lt;&lt; new FaveGround(ground: "SCG", city:"Sydney")
+
+def builder = new JsonBuilder() 
+def root = builder.players {
+    player {
+        name "${playr.name}"
+
+        faveGrounds(
+            playr.faveGrounds.collect{ 
+               FaveGround faveGround -&gt; [ground: faveGround.ground, city: faveGround.city]
+            }    
+        )
+    }
+}
+println builder.toPrettyString()
+</code></pre>
+
+</section><section>
+
+<h3 id="readinganxmlfile">Reading an XML file</h3>
+
+<pre><code class="xml">&lt;langs type="languages"&gt;
+    &lt;language&gt;Python&lt;/language&gt;
+    &lt;language&gt;Groovy&lt;/language&gt;
+    &lt;language&gt;Java&lt;/language&gt;
+&lt;/langs&gt;
+</code></pre>
+
+<pre><code class="groovy">def langs = new XmlParser().parse("langs.xml")
+println "type = ${langs.attribute("type")}"
+langs.language.each{
+    println it.text()
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="readinganxmlfileusingxmlslurper">Reading an XML file using XMLSlurper</h3>
+
+<pre><code class="groovy">def CAR_RECORDS = '''
+    &lt;records&gt;
+      &lt;car name='HSV Maloo' make='Holden' year='2006'&gt;
+        &lt;country&gt;Australia&lt;/country&gt;
+        &lt;record type='speed'&gt;Production Pickup Truck with speed of 271kph&lt;/record&gt;
+      &lt;/car&gt;
+      &lt;car name='P50' make='Peel' year='1962'&gt;
+        &lt;country&gt;Isle of Man&lt;/country&gt;
+        &lt;record type='size'&gt;Smallest Street-Legal Car at 99cm wide and 59 kg in weight&lt;/record&gt;
+      &lt;/car&gt;
+      &lt;car name='Royale' make='Bugatti' year='1931'&gt;
+        &lt;country&gt;France&lt;/country&gt;
+        &lt;record type='price'&gt;Most Valuable Car at $15 million&lt;/record&gt;
+      &lt;/car&gt;
+    &lt;/records&gt;
+  '''
+
+def records = new XmlSlurper().parseText(CAR_RECORDS)
+
+def allNodes = records.depthFirst().collect { 
+    println it
+}
+</code></pre>
+
+</section><section>
+
+<h3 id="readingajsonfilejsonslurper">Reading a JSON file JSONSlurper</h3>
+
+<pre><code class="groovy">import groovy.json.*
+
+def jsonText = '''
+{
+  "limit":{
+    "track":1234
+  }
+}       
+'''
+
+def json = new JsonSlurper().parseText(jsonText)
+
+def limit = json.limit
+assert limit.track == 1234
+</code></pre></section></section>
+
+<section id="metaprog">
+				<section id="agenda12">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+				</span>
+				<span class="highlight1">
+						Metaprogramming<br>
+						</span>
+				<span class="blur">
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="metaprogramming">Metaprogramming</h2>
+
+<ul>
+<li>Metaprogramming refers to writing code that can dynamically change its behavior at runtime.</li>
+<li>A Meta-Object Protocol [MOP] refers to the capabilities in a dynamic language that enable metaprogramming.</li>
+<li>In Groovy, the MOP consists of four distinct capabilities within the language: reflection, metaclasses, categories, and expandos.</li>
+</ul>
+
+<pre><code class="groovy">println "Hello".toUpperCase()
+
+String.metaClass.toUpperCase = {
+        delegate.toLowerCase()
+}
+
+println "Hello".toUpperCase()
+</code></pre>
+
+</section><section>
+
+<pre><code class="groovy">Integer.metaClass.isEven = {  -&gt;
+    delegate % 2 == 0
+}
+println 7.isEven()
+println 10.isEven()
+</code></pre>
+
+<p><br></p>
+
+<pre><code class="groovy">Integer.metaClass.static.isEven = { number -&gt;
+    number % 2 == 0
+}
+Integer.isEven(1)
+Integer.isEven(2)
+</code></pre>
+</section></section>
+
+<section id="groovyreferences">
+				<section id="agenda13">
+				<span class="blur">
+						Plan<br>
+						Groovy installation and env setup<br>
+						Groovy command line binaries<br>
+						Introduction to Groovy<br>
+						Groovy unique features [Java comparison]<br>
+						Closures<br>
+						Lists<br>
+						Ranges<br>
+						Maps<br>
+						Input Output<br>
+						Building and parsing XML or JSON<br>
+						Metaprogramming<br>
+				</span>
+				<span class="highlight1">
+						References<br>
+				</span>
+				</section>
+
+<section>
+<h2 id="groovyreferences">Groovy references</h2>
+
+<p><br></p>
+
+<h4 id="websites">Web</h4>
+
+<p><a target="_blank" href="http://groovy.codehaus.org">Groovy Website</a><br>
+<a target="_blank" href="http://mrhaki.blogspot.com/search/label/Groovy:Goodness">MrHAKI's Groovy Goodness Snippets</a>
+<br>
+<br></p>
+
+<h4 id="mailinglistforusers">Mailing list for users</h4>
+
+<a target="_blank" href="mailto:user@groovy.codehaus.org">user@groovy.codehaus.org</a>
+
+<br>
+<br>
+<h4 id="books">Books</h4></section></section>
+
+
+<section id="thanks">
+<section>
+<h2 id="bootstrappinggroovy">Bootstrapping Groovy</h2>
+
+<p><a target="_blank" href="http://P7h.org">Prashanth Babu</a> / <a target="_blank" href="http://twitter.com/P7h">@P7h</a></p>
+
+<br>
+<h3 id="thanks">Thanks</h3>
+<h3 id="qna">Q n A</h3>
+</section></section>
 
 		</div>
 
-		<script src="../reveal.js/lib/js/head.min.js"></script>
-		<script src="../reveal.js/js/reveal.min.js"></script>
+	</div>
 
-		<script>
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.min.js"></script>
+	<script src="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/lib/carousel.js"></script>
+	<script src="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/lib/md5.js"></script>
+	<script src="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/js/setup.js"></script>
+	<link rel="stylesheet" href="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/lib/carousel.css">
+
+
+	<script>
 
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/../reveal.js#configuration
@@ -70,16 +1624,16 @@
 
 				// Optional libraries used to extend on ../reveal.js
 				dependencies: [
-					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
-		</script>
+</script>
 
-	</body>
+</body>
 </html>

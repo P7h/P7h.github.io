@@ -45,7 +45,7 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-			<section>
+			<section data-transition="page">
 				<h1 id="bootstrapping-groovy"><span class="highlight1">Bootstrapping Groovy</span></h1>
 				
 					<a target="_blank" href="http://P7h.org">Prashanth Babu</a>
@@ -57,7 +57,7 @@
         </blockquote>
 				
 			</section>
-			<section>
+			<section data-transition="page">
 					<a target="_blank" href="https://twitter.com/jeremyckahn/statuses/322390046491688960">
 						<img src="https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Tweet_Jeremy.png" alt="Jeremy Tweet" /></a>
 
@@ -70,7 +70,7 @@
 					 -->
 				
 			</section>
-			<section>
+			<section data-transition="page">
 				<h2 id="whats-on-the-menu">What's on the menu?</h2>
 				<ul>
 					<li>
@@ -113,7 +113,7 @@
 						</li>
 					</ul>
 				</section>
-				<section>
+				<section data-transition="page">
 					<h2 id="plan">Plan</h2>
 					<ul>
 						<li>Bird's eye view of Groovy</li>
@@ -123,12 +123,12 @@
 						<li>Explore this presentation yourself</li>
 					</ul>
 			</section>
-			<section>
+			<section data-transition="page">
 				<blockquote>
 					Nothing is taught until something is learned.
 				</blockquote>
 			</section>
-			<section>
+			<section data-transition="page">
 				<h2 id="about-these-slides">About these slides</h2>
 				
 					You can get to these slides at
@@ -139,8 +139,8 @@
 					<a target="_blank" href="http://gist.github.com/P7h">http://gist.github.com/P7h</a>.
 				
 			</section>
-			<section id="install">
-				<section id="agenda02">
+			<section data-transition="concave" id="install">
+				<section id="agenda02" data-transition="concave">
 				<span class="blur">
 						Plan<br>
 				</span>
@@ -161,7 +161,7 @@
 				</span>
 				</section>
 
-<section>
+<section data-transition="concave">
 <h2 id="downloadgroovy">Download Groovy</h2>
 
 <ul>
@@ -169,7 +169,7 @@
 <li>Latest version - as of this writing [08th December, 2013] - is: <a target="_blank" href="http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.2.1.zip">Groovy 2.2.1</a>.</li>
 </ul>
 
-</section><section>
+</section data-transition="concave"><section>
 
 <h2 id="groovyinstallationandenvsetup">Groovy Installation and env setup</h2>
 
@@ -188,7 +188,7 @@
   Hat tip: <em>~/.groovy/lib</em> folder
 </blockquote>
 
-</section><section>
+</section data-transition="concave"><section>
 
 <h2 id="idepluginsforgroovy">IDE Plugins for Groovy</h2>
 
@@ -199,8 +199,8 @@
 </ul>
 </section></section>
 
-<section id="commandline">
-				<section id="agenda03">
+<section data-transition="zoom" id="commandline">
+				<section data-transition="zoom" id="agenda03">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -222,7 +222,7 @@
 				</section>
 
 
-<section>
+<section data-transition="zoom">
 <h2 id="groovycommands">Groovy Commands</h2>
 
 <ul>
@@ -234,7 +234,7 @@
 <li>java2groovy</li>
 </ul>
 
-</section><section>
+</section><section data-transition="zoom">
 <h4 id="groovy">groovy</h4>
 
 <pre><code class="bash">groovy -e "println 'Hello World'"
@@ -248,7 +248,7 @@ groovy HelloWorld
 
 <pre><code class="bash">groovyc HelloWorld.groovy
 </code></pre>
-</section><section>
+</section><section data-transition="zoom">
 
 <h4 id="groovydoc">groovydoc</h4>
 
@@ -262,7 +262,7 @@ groovy HelloWorld
 <pre><code class="bash">groovysh
 </code></pre>
 
-</section><section>
+</section><section data-transition="zoom">
 <h4 id="groovyconsole">groovyConsole</h4>
 
 <pre><code class="bash">groovyConsole
@@ -275,8 +275,8 @@ groovy HelloWorld
 <pre><code class="bash">java2groovy HelloWorld.java
 </code></pre></section></section>
 
-<section id="intro">
-				<section id="agenda04">
+<section data-transition="linear" id="intro">
+				<section data-transition="linear" id="agenda04">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -298,7 +298,7 @@ groovy HelloWorld
 				</span>
 				</section>
 
-<section>
+<section data-transition="linear">
 
 <h2 id="introduction">Introduction</h2>
 
@@ -313,7 +313,7 @@ groovy HelloWorld
 <li>Groovy Twitterati</li>
 </ul>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h2 id="tip">Tip</h2>
 
@@ -322,7 +322,7 @@ groovy HelloWorld
   Groovy runs on the JVM.
 </blockquote>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h2 id="groovy">Groovy</h2>
 
@@ -341,7 +341,7 @@ groovy HelloWorld
               + GDK library
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h2 id="typesystems">Type Systems</h2>
 
@@ -369,7 +369,7 @@ println groovyString.class
 <pre><code class="java">String javaString = "Satyendra Nath Bose";
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h2 id="obligatoryhelloworld">Obligatory "Hello World"</h2>
 
@@ -389,7 +389,7 @@ println groovyString.class
 <pre><code class="groovy">println "Hello World"
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="systemproperties">System Properties</h3>
 
@@ -423,7 +423,7 @@ public class SystemProperties {
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="trivia">Trivia</h3>
 
@@ -434,7 +434,7 @@ Guess what might be the output of this Groovy snippet?
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="demos">Demos</h3>
 
@@ -445,14 +445,14 @@ Guess what might be the output of this Groovy snippet?
 <li>Griffon sample app for loading dummy data to a database.</li>
 </ul>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="booksongroovy">Books on Groovy</h3>
 
 <a target="_blank" href="http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&amp;lo=stripbooks"><img src="https://raw.github.com/P7h/P7h.github.io/master/Groovy/img/Groovy_Books.png" alt="Groovy Books" title="" /></a>
 <a target="_blank" href="http://www.amazon.com/s/ref=sr_il_ti_stripbooks?rh=n%3A283155%2Ck%3Agroovy+programming&amp;lo=stripbooks">Various Groovy Books on Amazon</a>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="athoroughintroductiontogroovy">A thorough introduction to Groovy</h3>
 
@@ -460,7 +460,7 @@ Guess what might be the output of this Groovy snippet?
 
 <a target="_blank" href="http://www.manning.com/koenig">Groovy in Action aka GinA</a>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="groovytwitterati">Groovy Twitterati</h3>
 
@@ -469,8 +469,8 @@ Guess what might be the output of this Groovy snippet?
 </ul></section></section>
 
 
-<section id="groovyfeatures">
-				<section id="agenda05">
+<section data-transition="fade" id="groovyfeatures">
+				<section data-transition="fade" id="agenda05">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -492,7 +492,7 @@ Guess what might be the output of this Groovy snippet?
 				</span>
 				</section>
 
-<section>
+<section data-transition="fade">
 <h2 id="groovyfeatures">Groovy Features</h2>
 
 <ul>
@@ -510,7 +510,7 @@ Guess what might be the output of this Groovy snippet?
 <li>POJO vs. POGO</li>
 </ul>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Automatic imports</li>
@@ -536,7 +536,7 @@ SDF sdf = new SDF("MM/dd/yyyy")
 println sdf.format(new Date())
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Optional semicolons and parentheses</li>
@@ -552,7 +552,7 @@ String getFullName() {
 println getFullName()
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Optional datatype declaration</li>
@@ -566,7 +566,7 @@ date.next()
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Safe dereferencing</li>
@@ -583,7 +583,7 @@ str.size() // Caught: java.lang.NullPointerException: Cannot invoke method size(
 println str?.size()
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 <li>Safe dereferencing</li>
 <p>Java</p>
 
@@ -603,7 +603,7 @@ Groovy</p>
 <pre><code class="groovy">println order?.customer?.address
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Autoboxing</li>
@@ -617,7 +617,7 @@ someNumber = 2.0d
 println someNumber.class
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Groovy Truth</li>
@@ -648,7 +648,7 @@ StringBuilder sb = new StringBuilder()
 if(sb) // false since the StringBuilder is empty
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Embedded Quotes</li>
@@ -679,7 +679,7 @@ def lastName = "Strachan"
 println "Ahoy ${firstName} ${lastName}, today is ${new Date()}"
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>POJO</li>
@@ -717,7 +717,7 @@ person.setLastName("Strachan");
 System.out.println("Name: " + person);
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>POGO</li>
@@ -750,7 +750,7 @@ def person02 = new Person(lastName: "Rocher", firstName: "Graeme")
 println "Name yet again: " + person02
 </code></pre>
 
-</section><section>
+</section><section data-transition="fade">
 
 <ul>
 <li>Groovy coding guidelines</li>
@@ -758,9 +758,9 @@ println "Name yet again: " + person02
 
 <p><a target="_blank" href="http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers">Groovy style and language feature guidelines for Java developers</a></p></section></section>
 
-<section id="closures">
+<section data-transition="page" id="closures">
 
-				<section id="agenda06">
+				<section data-transition="page" id="agenda06">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -783,7 +783,7 @@ println "Name yet again: " + person02
 				</section>
 
 
-<section>
+<section data-transition="page">
 <h2 id="closures">Closures</h2>
 
 <ul>
@@ -796,7 +796,7 @@ println "Name yet again: " + person02
 <li>Java 8 is scheduled to come with this most wanted feature coined as <a target="_blank" href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">Lambdas</a> in March, 2014.</li>
 </ul>
 
-</section><section>
+</section><section data-transition="page">
 
 <ul>
 <li>Closures without any parameters</li>
@@ -821,7 +821,7 @@ printNum()
 printSum 5, 7
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <ul>
 <li><strong>Traditional mainstream languages</strong></li>
@@ -847,7 +847,7 @@ assert processThenPrint(3, doubleNum) == 6
 assert processThenPrint(10) { it / 2 } == 5
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="implicitvariables">Implicit variables</h3>
 <ul>
@@ -870,7 +870,7 @@ printStr "Print but with a custom method"
 <li><em>More about Closures in List and Map Comprehensions later.</em></li>
 </ul>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="curryinghttpenwikipediaorgwikicurrying"><a target="_blank" href="http://en.wikipedia.org/wiki/Currying">Currying</a></h3>
 
@@ -894,7 +894,7 @@ def tax = calculateTax.curry(0.1)
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="loopvariants">Loop variants</h3>
 
@@ -918,8 +918,8 @@ assert '02468' == result
 </code></pre></section></section>
 
 
-<section id="lists">
-				<section id="agenda07">
+<section data-transition="concave" id="lists">
+				<section data-transition="concave" id="agenda07">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -941,7 +941,7 @@ assert '02468' == result
 				</span>
 				</section>
 
-<section>
+<section data-transition="concave">
 <h2 id="lists">Lists</h2>
 
 <pre><code class="groovy">def list = [1, 2, 3, 4]
@@ -960,7 +960,7 @@ list &lt;&lt; 'a' &lt;&lt; 'e' &lt;&lt; 'i'
 assert list == [5,  'a', 'e', 'i']
 </code></pre>
 
-</section><section>
+</section><section data-transition="concave">
 
 <h2 id="lists">Lists</h2>
 
@@ -983,7 +983,7 @@ assert list * 2 == [0, 1, 2, 3, 4, -5, 6, 0, 1, 2, 3, 4, -5, 6]
 assert ('a'..'g')[3..5] == ['d', 'e', 'f']
 </code></pre>
 
-</section><section>
+</section><section data-transition="concave">
 
 <h2 id="lists">Lists</h2>
 
@@ -1000,7 +1000,7 @@ assert [1,2].reverse() == [2,1]
 assert [3,1,2].sort() == [1,2,3]
 </code></pre>
 
-</section><section>
+</section><section data-transition="concave">
 
 <h2 id="lists">Lists</h2>
 
@@ -1021,7 +1021,7 @@ range.eachWithIndex{ it, i -&gt;
 assert range.join(', ') == 'a, b, c, d, e, f'
 </code></pre>
 
-</section><section>
+</section><section data-transition="concave">
 
 <h2 id="lists">Lists</h2>
 
@@ -1050,8 +1050,8 @@ uniques.removeAll(dups)
 assert uniques == [1, 4, 11] as Set &amp;&amp; dups == [2, 5, 7] as Set
 </code></pre></section></section>
 
-<section id="ranges">
-				<section id="agenda08">
+<section data-transition="zoom" id="ranges">
+				<section data-transition="zoom" id="agenda08">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1073,7 +1073,7 @@ assert uniques == [1, 4, 11] as Set &amp;&amp; dups == [2, 5, 7] as Set
 				</span>
 				</section>
 
-<section>
+<section data-transition="zoom">
 <h2 id="ranges">Ranges</h2>
 
 <ul>
@@ -1098,7 +1098,7 @@ alphabets.each {
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="zoom">
 
 <h3 id="fewothermethodsofrange">Few other methods of Range</h3>
 
@@ -1120,7 +1120,7 @@ def nextWeek = today + 7
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="zoom">
 
 <h3 id="rangesinswitchcases">Ranges in switch cases</h3>
 
@@ -1145,8 +1145,8 @@ switch (years) {
 </code></pre></section></section>
 
 
-<section id="maps">
-				<section id="agenda09">
+<section data-transition="linear" id="maps">
+				<section data-transition="linear" id="agenda09">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1168,7 +1168,7 @@ switch (years) {
 				</span>
 				</section>
 
-<section>
+<section data-transition="linear">
 <h2 id="maps">Maps</h2>
 
 <ul>
@@ -1190,7 +1190,7 @@ map['status'] = "Retired"
 assert map == [name:'Sachin Tendulkar', likes:'Cricket', id:10, status:'Retired']
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="maps">Maps</h3>
 
@@ -1208,7 +1208,7 @@ map.each { k, v -&gt;
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="maps">Maps</h3>
 
@@ -1230,7 +1230,7 @@ map02 += map01
 println map02
 </code></pre>
 
-</section><section>
+</section><section data-transition="linear">
 
 <h3 id="maps">Maps</h3>
 
@@ -1257,8 +1257,8 @@ def r = new StringBuilder()
 assert r.toString() == '1 : a; 2 : b; 3 : c; '
 </code></pre></section></section>
 
-			<section id="io">
-				<section id="agenda10">
+			<section data-transition="fade" id="io">
+				<section data-transition="fade" id="agenda10">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1280,14 +1280,14 @@ assert r.toString() == '1 : a; 2 : b; 3 : c; '
 				</span>
 				</section>
 
-			<section>
+			<section data-transition="fade">
 					<h2 id="input-output">Input Output</h2>
 					<h4 id="read-a-file-line-by-line">Read a file line-by-line</h4>
 					<pre class="groovy"><code>new File(&quot;ReadTheFile.txt&quot;).eachLine { line -&gt; 
     println(line)
 }</code></pre>
 				</section>
-				<section>
+				<section data-transition="fade">
 					<h4 id="read-a-file-with-a-reader">Read a file with a Reader</h4>
 					<pre class="groovy"><code>def count=0, MAXSIZE=100
 new File(&quot;ReadTheFile.txt&quot;).withReader { reader -&gt;
@@ -1299,7 +1299,7 @@ new File(&quot;ReadTheFile.txt&quot;).withReader { reader -&gt;
   }
 }</code></pre>
 				</section>
-				<section>
+				<section data-transition="fade">
 					<h4 id="write-a-file-with-a-writer">Write a file with a Writer</h4>
 					<pre class="groovy"><code>def fields = [&quot;a&quot;:&quot;1&quot;, &quot;b&quot;:&quot;2&quot;, &quot;c&quot;:&quot;3&quot;]
 new File(&quot;WriteTheFile.ini&quot;).withWriter { out -&gt;
@@ -1308,7 +1308,7 @@ new File(&quot;WriteTheFile.ini&quot;).withWriter { out -&gt;
     }
 }</code></pre>
 				</section>
-				<section>
+				<section data-transition="fade">
 					<h4 id="loading-a-properties-file-in-groovy">Loading a properties file in Groovy</h4>
 				<pre class="properties"><code>java:oracle</code></pre>
 					<pre class="groovy"><code>def properties = new Properties()
@@ -1324,8 +1324,8 @@ properties.each { k, v -&gt;
 				</section>
 			</section>
 
-<section id="buildersandparser">
-				<section id="agenda11">
+<section data-transition="page" id="buildersandparser">
+				<section data-transition="page" id="agenda11">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1348,14 +1348,14 @@ properties.each { k, v -&gt;
 				</section>
 
 
-<section>
+<section data-transition="page">
 <h2 id="buildersandparsers">Builders and Parsers</h2>
 
 <ul>
 <li>Extensive support building and parsing HTML, XML and JSON.</li>
 </ul>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="buildingaxmlfile">Building a XML file</h3>
 
@@ -1376,7 +1376,7 @@ builder.numbers {
 println stringWriter
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="buildingajsonfile">Building a JSON file</h3>
 
@@ -1411,7 +1411,7 @@ def root = builder.players {
 println builder.toPrettyString()
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="readinganxmlfile">Reading an XML file</h3>
 
@@ -1429,7 +1429,7 @@ langs.language.each{
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="readinganxmlfileusingxmlslurper">Reading an XML file using XMLSlurper</h3>
 
@@ -1457,7 +1457,7 @@ def allNodes = records.depthFirst().collect {
 }
 </code></pre>
 
-</section><section>
+</section><section data-transition="page">
 
 <h3 id="readingajsonfilejsonslurper">Reading a JSON file JSONSlurper</h3>
 
@@ -1477,8 +1477,8 @@ def limit = json.limit
 assert limit.track == 1234
 </code></pre></section></section>
 
-<section id="metaprog">
-				<section id="agenda12">
+<section data-transition="concave" id="metaprog">
+				<section data-transition="concave" id="agenda12">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1500,7 +1500,7 @@ assert limit.track == 1234
 				</span>
 				</section>
 
-<section>
+<section data-transition="concave">
 <h2 id="metaprogramming">Metaprogramming</h2>
 
 <ul>
@@ -1518,7 +1518,7 @@ String.metaClass.toUpperCase = {
 println "Hello".toUpperCase()
 </code></pre>
 
-</section><section>
+</section><section data-transition="concave">
 
 <pre><code class="groovy">Integer.metaClass.isEven = {  -&gt;
     delegate % 2 == 0
@@ -1535,10 +1535,10 @@ println 10.isEven()
 Integer.isEven(1)
 Integer.isEven(2)
 </code></pre>
-</section></section>
+</section></section data-transition="concave">
 
-<section id="groovyreferences">
-				<section id="agenda13">
+<section data-transition="zoom" id="groovyreferences">
+				<section data-transition="zoom" id="agenda13">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1558,7 +1558,7 @@ Integer.isEven(2)
 				</span>
 				</section>
 
-<section>
+<section data-transition="zoom">
 <h2 id="groovyreferences">Groovy references</h2>
 
 <p><br></p>
@@ -1579,9 +1579,9 @@ Integer.isEven(2)
 <h4 id="books">Books</h4></section></section>
 
 
-<section id="thanks">
-<section>
-<h2 id="bootstrappinggroovy">Bootstrapping Groovy</h2>
+<section data-transition="fade" id="thanks">
+<section data-transition="fade">
+<h2>Bootstrapping Groovy</h2>
 
 <p><a target="_blank" href="http://P7h.org">Prashanth Babu</a> / <a target="_blank" href="http://twitter.com/P7h">@P7h</a></p>
 

@@ -139,8 +139,8 @@
 					<a target="_blank" href="http://gist.github.com/P7h">http://gist.github.com/P7h</a>.
 				
 			</section>
-			<section data-transition="concave" id="install">
-				<section id="agenda02" data-transition="concave">
+			<section id="install" data-transition="concave">
+			<section>
 				<span class="blur">
 						Plan<br>
 				</span>
@@ -169,7 +169,7 @@
 <li>Latest version - as of this writing [08th December, 2013] - is: <a target="_blank" href="http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.2.1.zip">Groovy 2.2.1</a>.</li>
 </ul>
 
-</section data-transition="concave"><section>
+</section><section data-transition="concave">
 
 <h2 id="groovyinstallationandenvsetup">Groovy Installation and env setup</h2>
 
@@ -188,7 +188,7 @@
   Hat tip: <em>~/.groovy/lib</em> folder
 </blockquote>
 
-</section data-transition="concave"><section>
+</section><section data-transition="concave">
 
 <h2 id="idepluginsforgroovy">IDE Plugins for Groovy</h2>
 
@@ -199,8 +199,8 @@
 </ul>
 </section></section>
 
-<section data-transition="zoom" id="commandline">
-				<section data-transition="zoom" id="agenda03">
+<section data-transition="zoom">
+				<section data-transition="zoom" id="groovycommands">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -223,7 +223,7 @@
 
 
 <section data-transition="zoom">
-<h2 id="groovycommands">Groovy Commands</h2>
+<h2>Groovy Commands</h2>
 
 <ul>
 <li>groovy</li>
@@ -275,8 +275,8 @@ groovy HelloWorld
 <pre><code class="bash">java2groovy HelloWorld.java
 </code></pre></section></section>
 
-<section data-transition="linear" id="intro">
-				<section data-transition="linear" id="agenda04">
+<section data-transition="linear">
+				<section data-transition="linear" id="intro">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -300,7 +300,7 @@ groovy HelloWorld
 
 <section data-transition="linear">
 
-<h2 id="introduction">Introduction</h2>
+<h2>Introduction</h2>
 
 <ul>
 <li>What is Groovy?</li>
@@ -469,8 +469,8 @@ Guess what might be the output of this Groovy snippet?
 </ul></section></section>
 
 
-<section data-transition="fade" id="groovyfeatures">
-				<section data-transition="fade" id="agenda05">
+<section data-transition="fade">
+				<section data-transition="fade" id="groovyfeatures">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -493,7 +493,7 @@ Guess what might be the output of this Groovy snippet?
 				</section>
 
 <section data-transition="fade">
-<h2 id="groovyfeatures">Groovy Features</h2>
+<h2>Groovy Features</h2>
 
 <ul>
 <li>Automatic imports</li>
@@ -760,7 +760,7 @@ println "Name yet again: " + person02
 
 <section data-transition="page" id="closures">
 
-				<section data-transition="page" id="agenda06">
+				<section data-transition="page" id="closures">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -784,7 +784,7 @@ println "Name yet again: " + person02
 
 
 <section data-transition="page">
-<h2 id="closures">Closures</h2>
+<h2>Closures</h2>
 
 <ul>
 <li>Not to be confused with <a target="_blank" href="http://clojure.org">Clojure</a>, another JVM based dynamic programming language. </li>
@@ -918,8 +918,8 @@ assert '02468' == result
 </code></pre></section></section>
 
 
-<section data-transition="concave" id="lists">
-				<section data-transition="concave" id="agenda07">
+<section data-transition="concave">
+				<section data-transition="concave" id="lists">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -942,7 +942,7 @@ assert '02468' == result
 				</section>
 
 <section data-transition="concave">
-<h2 id="lists">Lists</h2>
+<h2>Lists</h2>
 
 <pre><code class="groovy">def list = [1, 2, 3, 4]
 assert list.size == 4
@@ -950,7 +950,7 @@ assert list.size() == 4
 assert list.class == ArrayList
 </code></pre>
 
-<p><br></p>
+<br>
 
 <pre><code class="groovy">def list = []
 assert list.size() == 0
@@ -1012,7 +1012,7 @@ list[3] = 11
 assert sublist == [9, 11]
 </code></pre>
 
-<p><br></p>
+<br>
 
 <pre><code class="groovy">def range = ('a'..'f')
 range.eachWithIndex{ it, i -&gt; 
@@ -1035,7 +1035,7 @@ assert range.join(', ') == 'a, b, c, d, e, f'
 assert doubled == [2,4,6]
 </code></pre>
 
-<p><br></p>
+<br>
 
 <ul>
 <li>Divide a list into 2 lists with one list containing only unique elements and another only duplicates.</li>
@@ -1050,8 +1050,8 @@ uniques.removeAll(dups)
 assert uniques == [1, 4, 11] as Set &amp;&amp; dups == [2, 5, 7] as Set
 </code></pre></section></section>
 
-<section data-transition="zoom" id="ranges">
-				<section data-transition="zoom" id="agenda08">
+<section data-transition="zoom">
+				<section data-transition="zoom" id="ranges">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1111,7 +1111,7 @@ println i.contains(-9)
 println i.reverse()
 </code></pre>
 
-<p><br></p>
+<br>
 
 <pre><code class="groovy">def today = new Date()
 def nextWeek = today + 7
@@ -1145,8 +1145,8 @@ switch (years) {
 </code></pre></section></section>
 
 
-<section data-transition="linear" id="maps">
-				<section data-transition="linear" id="agenda09">
+<section data-transition="linear">
+				<section data-transition="linear" id="maps">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1169,7 +1169,7 @@ switch (years) {
 				</section>
 
 <section data-transition="linear">
-<h2 id="maps">Maps</h2>
+<h2>Maps</h2>
 
 <ul>
 <li>Simple examples</li>
@@ -1257,8 +1257,8 @@ def r = new StringBuilder()
 assert r.toString() == '1 : a; 2 : b; 3 : c; '
 </code></pre></section></section>
 
-			<section data-transition="fade" id="io">
-				<section data-transition="fade" id="agenda10">
+			<section data-transition="fade">
+				<section data-transition="fade" id="io">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1324,8 +1324,8 @@ properties.each { k, v -&gt;
 				</section>
 			</section>
 
-<section data-transition="page" id="buildersandparser">
-				<section data-transition="page" id="agenda11">
+<section data-transition="page">
+				<section data-transition="page" id="buildersandparsers">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1349,7 +1349,7 @@ properties.each { k, v -&gt;
 
 
 <section data-transition="page">
-<h2 id="buildersandparsers">Builders and Parsers</h2>
+<h2>Builders and Parsers</h2>
 
 <ul>
 <li>Extensive support building and parsing HTML, XML and JSON.</li>
@@ -1477,8 +1477,8 @@ def limit = json.limit
 assert limit.track == 1234
 </code></pre></section></section>
 
-<section data-transition="concave" id="metaprog">
-				<section data-transition="concave" id="agenda12">
+<section data-transition="concave">
+				<section data-transition="concave" id="metaprog">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1501,7 +1501,7 @@ assert limit.track == 1234
 				</section>
 
 <section data-transition="concave">
-<h2 id="metaprogramming">Metaprogramming</h2>
+<h2>Metaprogramming</h2>
 
 <ul>
 <li>Metaprogramming refers to writing code that can dynamically change its behavior at runtime.</li>
@@ -1520,6 +1520,9 @@ println "Hello".toUpperCase()
 
 </section><section data-transition="concave">
 
+<ul>
+<li>Metaprogramming examples</li>
+</ul>
 <pre><code class="groovy">Integer.metaClass.isEven = {  -&gt;
     delegate % 2 == 0
 }
@@ -1527,7 +1530,7 @@ println 7.isEven()
 println 10.isEven()
 </code></pre>
 
-<p><br></p>
+<br>
 
 <pre><code class="groovy">Integer.metaClass.static.isEven = { number -&gt;
     number % 2 == 0
@@ -1537,8 +1540,8 @@ Integer.isEven(2)
 </code></pre>
 </section></section data-transition="concave">
 
-<section data-transition="zoom" id="groovyreferences">
-				<section data-transition="zoom" id="agenda13">
+<section data-transition="zoom">
+				<section data-transition="zoom" id="groovyreferences">
 				<span class="blur">
 						Plan<br>
 						Groovy installation and env setup<br>
@@ -1559,9 +1562,9 @@ Integer.isEven(2)
 				</section>
 
 <section data-transition="zoom">
-<h2 id="groovyreferences">Groovy references</h2>
+<h2>Groovy references</h2>
 
-<p><br></p>
+<br>
 
 <h4 id="websites">Web</h4>
 

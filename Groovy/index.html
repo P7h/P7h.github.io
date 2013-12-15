@@ -40,7 +40,7 @@
 					/
 					<a target="_blank" href="http://twitter.com/P7h">@P7h</a><br><br><br>
 			<br><br>
-			<span class="fragment">
+			<span class="fragment roll-in">
 			<small class="hidePrint" style="color:#adadad">Navigate with <span class="key">space</span> or <span class="key">→</span> and <span class="key">↓</span> or <span class="key">PgDown</span> or <span class="key">swipe</span> and</small><br>
 			<small class="hidePrint" style="color:#adadad">hit <span class="key">Esc</span> for a bird's-eye view of presentation.</small>
 			</span>
@@ -1579,7 +1579,6 @@ Integer.isEven(2)
 	<script src="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/js/setup.js"></script>
 	<link rel="stylesheet" href="http://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/lib/carousel.css">
 
-
 	<script>
 
 			// Full list of configuration options available here:
@@ -1588,10 +1587,20 @@ Integer.isEven(2)
 				controls: true,
 				progress: true,
 				slideNumber: true,
-				history: true,
+				history: false,
+				keyboard: true,
+				overview: true,
 				center: true,
-				previewLinks: true,
+				touch: true,
+			    loop: false,
+			    rtl: false,
+			    fragments: true,
+			    autoSlide: 0,
+			    autoSlideStoppable: true,
 				mouseWheel: true,
+			    hideAddressBar: true,
+			    previewLinks: false,
+				rollingLinks: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition, // default/cube/page/concave/zoom/linear/fade/none
@@ -1604,12 +1613,7 @@ Integer.isEven(2)
 				// Optional libraries used to extend on ../reveal.js
 				dependencies: [
 				{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },				
-				{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 

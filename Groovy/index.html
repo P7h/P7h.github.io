@@ -10,6 +10,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+	<!-- <link rel="stylesheet" href="../reveal.js/css/print/print.css"> -->
 	<link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">
 
 	<!-- For syntax highlighting -->
@@ -183,7 +184,7 @@
 
 <br>
 
-<blockquote class="fragment">
+<blockquote>
   Hat tip: <em>~/.groovy/lib</em> folder
 </blockquote>
 
@@ -234,44 +235,44 @@
 </ul>
 
 </section><section>
-<h4 class="fragment" data-fragment-index="0" id="groovy">groovy</h4>
+<h4 id="groovy">groovy</h4>
 
-<pre class="fragment" data-fragment-index="0"><code class="bash">groovy -e "println 'Hello World'"
+<pre><code class="bash">groovy -e "println 'Hello World'"
 groovy HelloWorld.groovy
 groovy HelloWorld
 </code></pre>
 
 <br>
 
-<h4 class="fragment" data-fragment-index="1" id="groovyc">groovyc</h4>
+<h4 id="groovyc">groovyc</h4>
 
-<pre class="fragment" data-fragment-index="1"><code class="bash">groovyc HelloWorld.groovy
+<pre><code class="bash">groovyc HelloWorld.groovy
 </code></pre>
 </section><section>
 
-<h4 class="fragment" data-fragment-index="0" id="groovydoc">groovydoc</h4>
+<h4 id="groovydoc">groovydoc</h4>
 
-<pre class="fragment" data-fragment-index="0"><code class="bash">groovydoc HelloWorld.groovy
+<pre><code class="bash">groovydoc HelloWorld.groovy
 </code></pre>
 
 <br>
 
-<h4 class="fragment" data-fragment-index="4" id="groovysh">groovysh</h4>
+<h4 id="groovysh">groovysh</h4>
 
-<pre class="fragment" data-fragment-index="4"><code class="bash">groovysh
+<pre><code class="bash">groovysh
 </code></pre>
 
 </section><section>
-<h4 class="fragment" data-fragment-index="5" id="groovyconsole">groovyConsole</h4>
+<h4 id="groovyconsole">groovyConsole</h4>
 
-<pre class="fragment" data-fragment-index="5"><code class="bash">groovyConsole
+<pre><code class="bash">groovyConsole
 </code></pre>
 
 <br>
 
-<h4 class="fragment" data-fragment-index="6" id="java2groovy">java2groovy</h4>
+<h4 id="java2groovy">java2groovy</h4>
 
-<pre class="fragment" data-fragment-index="6"><code class="bash">java2groovy HelloWorld.java
+<pre><code class="bash">java2groovy HelloWorld.java
 </code></pre></section></section>
 
 <section id="intro">
@@ -331,7 +332,7 @@ groovy HelloWorld
 
 <br>
 
-<pre class="fragment"><code class="groovy">Groovy = Java – boiler plate code
+<pre><code class="groovy">Groovy = Java – boiler plate code
               + mostly dynamic typing
               + closures
               + domain specific languages
@@ -348,33 +349,33 @@ groovy HelloWorld
 <li>In programming languages, a <strong>type system</strong> is a collection of rules that assign a property called a <em>type</em> to the various constructs — such as variables, expressions, functions or modules, etc — a computer program is composed of.</li>
 </ul>
 
-<blockquote class="fragment" data-fragment-index="1">
+<blockquote>
   Groovy is <a target="_blank" href="http://en.wikipedia.org/wiki/Dynamic_programming_language">dynamically typed programming language</a>; while Java is <a target="_blank" href="http://en.wikipedia.org/wiki/Type_system#Static_type-checking">statically typed programming language</a>.
 </blockquote>
 
-<ul class="fragment" data-fragment-index="2">
+<ul>
 <li>Groovy</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">def groovyString = "Peter Higgs"
+<pre><code class="groovy">def groovyString = "Peter Higgs"
 println groovyString.class
 </code></pre>
 <br>
 
-<ul class="fragment" data-fragment-index="3">
+<ul>
 <li>Java</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="3"><code class="java">String javaString = "Satyendra Nath Bose";
+<pre><code class="java">String javaString = "Satyendra Nath Bose";
 </code></pre>
 
 </section><section>
 
-<h2 class="fragment" data-fragment-index="1" id="obligatoryhelloworld">Obligatory "Hello World"</h2>
+<h2 id="obligatoryhelloworld">Obligatory "Hello World"</h2>
 
-<h4 class="fragment" data-fragment-index="1" id="java">Java</h4>
+<h4 id="java">Java</h4>
 
-<pre class="fragment" data-fragment-index="1" rel="Java"><code class="java">public class HelloWorld {
+<pre rel="Java"><code class="java">public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
@@ -383,18 +384,18 @@ println groovyString.class
 
 <br>
 
-<h4 class="fragment" data-fragment-index="2" id="groovy">Groovy</h4>
+<h4 id="groovy">Groovy</h4>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">println "Hello World"
+<pre><code class="groovy">println "Hello World"
 </code></pre>
 
 </section><section>
 
-<h3 class="fragment" data-fragment-index="1" id="systemproperties">System Properties</h3>
+<h3 id="systemproperties">System Properties</h3>
 
-<h4 class="fragment" data-fragment-index="1" class="fragment" data-fragment-index="1" id="java">Java</h4>
+<h4 id="java">Java</h4>
 
-<pre class="fragment" data-fragment-index="1"><code class="java">import java.util.Iterator;
+<pre><code class="java">import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 import java.util.SortedMap;
@@ -415,9 +416,9 @@ public class SystemProperties {
 }
 </code></pre>
 
-<h4 class="fragment" data-fragment-index="2" id="groovy">Groovy</h4>
+<h4 id="groovy">Groovy</h4>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">System.properties.sort().each { key, value -&gt;
+<pre><code class="groovy">System.properties.sort().each { key, value -&gt;
     println "$key = $value"
 }
 </code></pre>
@@ -511,11 +512,11 @@ Guess what might be the output of this Groovy snippet?
 
 </section><section>
 
-<ul class="fragment" data-fragment-index="1">
+<ul>
 <li>Automatic imports</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="1"><code class="groovy">import java.lang.*
+<pre><code class="groovy">import java.lang.*
 import java.util.*
 import java.net.*
 import java.io.*
@@ -526,11 +527,11 @@ import groovy.lang.*
 import groovy.util.*
 </code></pre>
 
-<ul class="fragment" data-fragment-index="2">
+<ul>
 <li>Import aliasing</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">import java.text.SimpleDateFormat as SDF
+<pre><code class="groovy">import java.text.SimpleDateFormat as SDF
 SDF sdf = new SDF("MM/dd/yyyy")
 println sdf.format(new Date())
 </code></pre>
@@ -583,10 +584,10 @@ println str?.size()
 </code></pre>
 
 </section><section>
-<li class="fragment" data-fragment-index="1">Safe dereferencing</li>
-<p class="fragment" data-fragment-index="1">Java</p>
+<li>Safe dereferencing</li>
+<p>Java</p>
 
-<pre class="fragment" data-fragment-index="1"><code class="java">if (order != null) {
+<pre><code class="java">if (order != null) {
     if (order.getCustomer() != null) {
         if (order.getCustomer().getAddress() != null) {
             System.out.println(order.getCustomer().getAddress());
@@ -596,10 +597,10 @@ println str?.size()
 </code></pre>
 
 <br>
-<p class="fragment" data-fragment-index="2">
+<p>
 Groovy</p>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">println order?.customer?.address
+<pre><code class="groovy">println order?.customer?.address
 </code></pre>
 
 </section><section>
@@ -649,31 +650,31 @@ if(sb) // false since the StringBuilder is empty
 
 </section><section>
 
-<ul class="fragment" data-fragment-index="1">
+<ul>
 <li>Embedded Quotes</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="1"><code class="groovy">def s1 = 'You either die a "hero" or you live long enough to see yourself become the "villain".'
+<pre><code class="groovy">def s1 = 'You either die a "hero" or you live long enough to see yourself become the "villain".'
 def s2 = "You either die a 'hero' or you live long enough to see yourself become the 'villain'."
 def s3 = "You either die a \"hero\" or you live long enough to see yourself become the \"villain\"."
 </code></pre>
 
-<ul class="fragment" data-fragment-index="2">
+<ul>
 <li>Heredocs</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">String groovyHereDocs1 = """Harvey said "You either die a hero or 
+<pre><code class="groovy">String groovyHereDocs1 = """Harvey said "You either die a hero or 
 you live long enough to see yourself become the villain.""""
 def groovyHereDocs2 = '''You either die a hero or 
 you live long enough to see yourself become the villain.'''
 println groovyHereDocs2.class
 </code></pre>
 
-<ul class="fragment" data-fragment-index="3">
+<ul>
 <li>GStrings</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="3"><code class="groovy">def firstName = "James"
+<pre><code class="groovy">def firstName = "James"
 def lastName = "Strachan"
 println "Ahoy ${firstName} ${lastName}, today is ${new Date()}"
 </code></pre>
@@ -718,11 +719,11 @@ System.out.println("Name: " + person);
 
 </section><section>
 
-<ul class="fragment" data-fragment-index="1">
+<ul>
 <li>POGO</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="1"><code class="groovy">class Person {
+<pre><code class="groovy">class Person {
     String firstName
     String lastName
     String toString() {
@@ -736,7 +737,7 @@ person01.lastName = "Strachan"
 println "Name: " + person01
 </code></pre>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">//Another way of instantiating an object in Groovy.
+<pre><code class="groovy">//Another way of instantiating an object in Groovy.
 person01.with {
     firstName = "Guillaume"
     lastName = "Laforge"
@@ -744,7 +745,7 @@ person01.with {
 println "Name again: " + person01
 </code></pre>
 
-<pre class="fragment" data-fragment-index="3"><code class="groovy">//Yet another way of instantiating an object in Groovy.
+<pre><code class="groovy">//Yet another way of instantiating an object in Groovy.
 def person02 = new Person(lastName: "Rocher", firstName: "Graeme")
 println "Name yet again: " + person02
 </code></pre>
@@ -797,11 +798,11 @@ println "Name yet again: " + person02
 
 </section><section>
 
-<ul class="fragment" data-fragment-index="1">
+<ul>
 <li>Closures without any parameters</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="1"><code class="groovy">def x = 5, y = 6;
+<pre><code class="groovy">def x = 5, y = 6;
 def printNum {
     println x + " " + y
 }
@@ -810,11 +811,11 @@ printNum()
 
 <br>
 
-<ul class="fragment" data-fragment-index="2">
+<ul>
 <li>Closures with parameters</li>
 </ul>
 
-<pre class="fragment" data-fragment-index="2"><code class="groovy">def printSum = { a, b -&gt; 
+<pre><code class="groovy">def printSum = { a, b -&gt; 
     print a + b
 }
 printSum 5, 7
@@ -822,19 +823,19 @@ printSum 5, 7
 
 </section><section>
 
-<ul class="fragment" data-fragment-index="1">
+<ul>
 <li><strong>Traditional mainstream languages</strong></li>
 </ul>
 
-<p class="fragment" data-fragment-index="1">Data can be stored in variables, passed around, combined in structured ways to form more complex data; code stays put where it is defined.</p>
+<p>Data can be stored in variables, passed around, combined in structured ways to form more complex data; code stays put where it is defined.</p>
 
-<ul class="fragment" data-fragment-index="2">
+<ul>
 <li><strong>Languages supporting closures</strong></li>
 </ul>
 
-<p class="fragment" data-fragment-index="2">Data <em>and code</em> can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.</p>
+<p>Data <em>and code</em> can be stored in variables, passed around, combined in structured ways to form more complex algorithms and data.</p>
 
-<pre class="fragment" data-fragment-index="3"><code class="groovy">doubleNum = { 
+<pre><code class="groovy">doubleNum = { 
     num -&gt; num * 2
 }
 assert doubleNum(3) == 6
